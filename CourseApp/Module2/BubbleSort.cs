@@ -1,13 +1,22 @@
 ﻿using System;
 
-namespace CourseApp
+namespace CourseApp.Module2
 {
-    internal static class BubbleSort
+    public static class BubbleSort
     {
         private static bool swapped = false;
 
-        public static void SortArr(int[] arr)
+        public static void BubbleSortMethod()
         {
+            int n = int.Parse(Console.ReadLine());
+            string s = Console.ReadLine();
+            string[] sValues = s.Split(' ');
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = int.Parse(sValues[i]);
+            }
+
             for (int i = 0; i < arr.Length; i++)
             {
                 for (int j = 0; j < arr.Length - i - 1; j++)
@@ -15,7 +24,8 @@ namespace CourseApp
                     if (arr[j] > arr[j + 1])
                     {
                         Swap(ref arr[j], ref arr[j + 1]);
-                        ShowArray(arr);
+                        string result = string.Join(" ", arr);
+                        Console.WriteLine(result);
                         swapped = true;
                     }
                 }

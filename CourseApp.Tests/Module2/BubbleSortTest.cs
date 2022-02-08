@@ -1,18 +1,23 @@
-﻿using System;
-using System.IO;
-using Xunit;
-using CourseApp.Module2;
-
-namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module2
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+    using Xunit;
+
     [Collection("Sequential")]
     public class BubbleSortTest : IDisposable
     {
-        private const string Inp1 = @"7
-5 1 7 3 9 4 1";
+        private const string Inp1 = @"4
+4 3 2 1";
 
-        private const string Inp2 = @"3
--10 7 2";
+        private const string Out1 = @"3 4 2 1
+3 2 4 1
+3 2 1 4
+2 3 1 4
+2 1 3 4
+1 2 3 4";
 
         public void Dispose()
         {
@@ -24,8 +29,7 @@ namespace CourseApp.Tests.Module2
         }
 
         [Theory]
-        [InlineData(Inp1, "1 1 3 4 5 7 9")]
-        [InlineData(Inp2, "-10 2 7")]
+        [InlineData(Inp1, Out1)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -39,7 +43,9 @@ namespace CourseApp.Tests.Module2
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-            Assert.Equal($"{expected}", output[0]);
+            var result = string.Join(Environment.NewLine, output);
+
+            Assert.Equal($"{expected}", result);
         }
     }
 }

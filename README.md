@@ -1,3 +1,5 @@
-# Tprogramming_42_2020
+# Algorithm 2022
+
+Belyakov Alexey Vasilevich
 
 Master branch :)

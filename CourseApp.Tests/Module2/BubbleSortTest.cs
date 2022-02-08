@@ -19,6 +19,11 @@
 2 1 3 4
 1 2 3 4";
 
+        private const string Inp2 = @"4
+1 2 3 4";
+
+        private const string Out2 = @"0";
+
         public void Dispose()
         {
             var standardOut = new StreamWriter(Console.OpenStandardOutput());
@@ -30,6 +35,7 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
+        [InlineData(Inp2, Out2)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

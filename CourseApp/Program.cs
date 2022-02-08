@@ -1,5 +1,4 @@
 ﻿using System;
-using CourseApp.Module2;
 
 namespace CourseApp
 {
@@ -7,9 +6,15 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[n];
+            string[] substr = Console.ReadLine().Split(' ');
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = int.Parse(substr[i]);
+            }
 
-            Console.WriteLine("Hello World");
+            BubbleSort.SortArr(arr);
         }
     }
 }

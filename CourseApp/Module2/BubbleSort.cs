@@ -27,12 +27,11 @@ namespace CourseApp.Module2
                         // arr[j] = arr[j + 1];
                         // arr[j+1] = temp;
                         (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        string result = string.Join(" ", arr);
+                        Console.WriteLine(result);
                     }
                 }
             }
-
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
         }
     }
 }

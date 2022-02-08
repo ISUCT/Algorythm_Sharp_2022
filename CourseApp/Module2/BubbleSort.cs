@@ -37,16 +37,6 @@ namespace CourseApp.Module2
             }
         }
 
-        private static void ShowArray(int[] arr)
-        {
-            foreach (int i in arr)
-            {
-                Console.Write(i + " ");
-            }
-
-            Console.WriteLine();
-        }
-
         private static void Swap(ref int left, ref int right)
         {
             int temp = right;

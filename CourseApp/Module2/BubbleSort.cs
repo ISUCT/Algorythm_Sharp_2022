@@ -4,6 +4,8 @@ namespace CourseApp
 {
     internal static class BubbleSort
     {
+        private static bool swapped = false;
+
         public static void SortArr(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
@@ -14,16 +16,15 @@ namespace CourseApp
                     {
                         Swap(ref arr[j], ref arr[j + 1]);
                         ShowArray(arr);
+                        swapped = true;
                     }
                 }
             }
-        }
 
-        private static void Swap(ref int left, ref int right)
-        {
-            int temp = right;
-            right = left;
-            left = temp;
+            if (swapped == false)
+            {
+                Console.WriteLine(0);
+            }
         }
 
         private static void ShowArray(int[] arr)
@@ -34,6 +35,13 @@ namespace CourseApp
             }
 
             Console.WriteLine();
+        }
+
+        private static void Swap(ref int left, ref int right)
+        {
+            int temp = right;
+            right = left;
+            left = temp;
         }
     }
 }

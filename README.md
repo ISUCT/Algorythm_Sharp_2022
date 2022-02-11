@@ -1,3 +1,3 @@
-# Tprogramming_42_2020
+# Tprogramming_147_2022
 
-Master branch :)
+Shokhin Akim 1/147

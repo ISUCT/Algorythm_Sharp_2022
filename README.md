@@ -1,3 +1,3 @@
 # Tprogramming_147_2022
 
-Shokhin Akim
+Shokhin Akim 1/147

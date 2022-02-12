@@ -7,7 +7,8 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.Bubble_sort();
+            // BubbleSort.Bubble_sort(); //
+            BubbleSort2.BubbleSort_2();
         }
     }
 }

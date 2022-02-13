@@ -1,38 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// This source code is Copyright © Test Company and MAY NOT be copied, reproduced,
+// published, distributed or transmitted to or stored in any manner without prior
+// written consent from Test Company (www.yourcompany.com).
 
-namespace CourseApp.Module2
+using System;
+
+public class BubbleSort
 {
-    public class BubbleSort
+    public static void BubbleSortMethod()
     {
-        public static void BubbleSortMethod()
+        bool changes = false;
+        string size = Console.ReadLine();
+        string value = Console.ReadLine();
+        string[] numbers = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        for (int i = 0; i < numbers.Length - 1; i++)
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
+            for (int j = 0; j < numbers.Length - 1 - i; j++)
             {
-                arr[i] = int.Parse(sValues[i]);
-            }
-
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                if (int.Parse(numbers[j]) > int.Parse(numbers[j + 1]))
                 {
-                    if (arr[j] > arr[j + 1])
-                    {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
-                    }
+                    (numbers[j], numbers[j + 1]) = (numbers[j + 1], numbers[j]);
+                    string result = string.Join(" ", numbers);
+                    Console.WriteLine(result);
+                    changes = true;
                 }
             }
+        }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+        if (changes == false)
+        {
+            Console.WriteLine(0);
         }
     }
 }

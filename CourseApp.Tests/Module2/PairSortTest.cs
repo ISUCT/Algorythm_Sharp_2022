@@ -49,7 +49,6 @@ namespace CourseApp.Tests.Module2
 
             // assert
             var output = File.ReadAllText("output.txt");
-            System.Console.WriteLine(output);
             Assert.Equal($"{expected}", output);
             File.Delete("output.txt");
         }

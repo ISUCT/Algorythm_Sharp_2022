@@ -1,5 +1,6 @@
-﻿using System;
+﻿using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CourseApp.Module2
@@ -8,31 +9,35 @@ namespace CourseApp.Module2
     {
         public static void BubbleSortMethod()
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
+            string[] inputData = File.ReadAllLines("input.txt");
+
+            int[] array = new int[int.Parse(inputData[0])];
+            foreach (var pair in inputData[1].Split(" ").Select((x, i) => new { Index = i, Value=x }))
             {
-                arr[i] = int.Parse(sValues[i]);
+                array[pair.Index] = int.Parse(pair.Value);
             }
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            StreamWriter output = new StreamWriter("output.txt");
+            bool trigger = false;
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                for (int j = 0; j < array.Length - i - 1; j++)
                 {
-                    if (arr[j] > arr[j + 1])
+                    if (array[j] > array[j + 1])
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        (array[j], array[j + 1]) = (array[j + 1], array[j]);
+                        output.WriteLine(string.Join(" ", array));
+                        trigger = true;
                     }
                 }
             }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+            if (!trigger)
+            {
+                output.WriteLine("0");
+            }
+
+            output.Close();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace CourseApp.Module2
             PairBubbleSortMethod(data);
         }
 
-        public static void PairBubbleSortMethod(string[] array)
+         public static void PairBubbleSortMethod(string[] array)
         {
             int[,] buffer = new int[2, 2];
             for (int i = 0; i < array.Length - 1; i++)

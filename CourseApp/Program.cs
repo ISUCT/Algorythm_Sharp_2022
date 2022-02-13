@@ -4,7 +4,8 @@
     {
         private static void Main()
         {
-            BubbleSort.BubbleSortMethod();
+            // BubbleSort.BubbleSortMethod();
+            PairSort.PairSortMethod();
         }
     }
 }

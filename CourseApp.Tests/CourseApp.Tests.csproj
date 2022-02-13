@@ -27,4 +27,8 @@
     <AdditionalFiles Include="../_stylecop/stylecop.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Module1\" />
+  </ItemGroup>
+
 </Project>

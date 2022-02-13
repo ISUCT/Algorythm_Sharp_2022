@@ -7,16 +7,17 @@ namespace CourseApp.Module2
 {
     public class BubbleSort
     {
-        public static void BubbleSortMethod()
+        public static void DoBubbleSort()
         {
             string[] inputData = File.ReadAllLines("input.txt");
 
-            int[] array = new int[int.Parse(inputData[0])];
-            foreach (var pair in inputData[1].Split(" ").Select((x, i) => new { Index = i, Value=x }))
-            {
-                array[pair.Index] = int.Parse(pair.Value);
-            }
+            int[] array = inputData[1].Split(' ').Select(int.Parse).ToArray();
 
+            BubbleSortMethod(array);
+        }
+
+        public static void BubbleSortMethod(int[] array)
+        {
             StreamWriter output = new StreamWriter("output.txt");
             bool trigger = false;
             for (int i = 0; i < array.Length - 1; i++)

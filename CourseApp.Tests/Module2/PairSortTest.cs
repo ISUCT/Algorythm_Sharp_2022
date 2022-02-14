@@ -8,7 +8,7 @@ using CourseApp.Module2;
 namespace CourseApp.Tests.Module2
 {
     [Collection("Sequential")]
-    public class PairSortTest : IDisposable
+    public class PairSortTest
     {
         private const string Inp1 = @"101 80
 305 90
@@ -20,22 +20,11 @@ namespace CourseApp.Tests.Module2
 
         private const string Out1 = @"305 90
 101 80
-200 14
-";
+200 14";
 
         private const string Out2 = @"20 90
 25 90
-30 90
-";
-
-        public void Dispose()
-        {
-            var standardOut = new StreamWriter(Console.OpenStandardOutput());
-            standardOut.AutoFlush = true;
-            var standardIn = new StreamReader(Console.OpenStandardInput());
-            Console.SetOut(standardOut);
-            Console.SetIn(standardIn);
-        }
+30 90";
 
         [Theory]
         [InlineData(Inp1, Out1)]
@@ -45,11 +34,10 @@ namespace CourseApp.Tests.Module2
             // act
             string[] testingData = input.Split("\r\n").ToArray();
 
-            PairSort.PairBubbleSortMethod(testingData);
+            string answer = string.Join("\r\n", PairSort.PairBubbleSortMethod(testingData));
 
             // assert
-            var output = File.ReadAllText("output.txt");
-            Assert.Equal($"{expected}", output);
+            Assert.Equal($"{expected}", answer);
             File.Delete("output.txt");
         }
     }

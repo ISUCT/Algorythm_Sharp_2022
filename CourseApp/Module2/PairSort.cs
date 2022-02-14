@@ -15,10 +15,16 @@ namespace CourseApp.Module2
             }
 
             reader.Close();
-            PairBubbleSortMethod(data);
+            StreamWriter output = new StreamWriter("output.txt");
+                foreach (string item in PairBubbleSortMethod(data))
+                {
+                    output.WriteLine(item);
+                }
+
+                output.Close();
         }
 
-         public static void PairBubbleSortMethod(string[] array)
+         public static string[] PairBubbleSortMethod(string[] array)
         {
             int[,] buffer = new int[2, 2];
             for (int i = 0; i < array.Length - 1; i++)
@@ -45,13 +51,7 @@ namespace CourseApp.Module2
                 }
             }
 
-            StreamWriter output = new StreamWriter("output.txt");
-                foreach (string item in array)
-                {
-                    output.WriteLine(item);
-                }
-
-                output.Close();
+            return array;
         }
     }
 }

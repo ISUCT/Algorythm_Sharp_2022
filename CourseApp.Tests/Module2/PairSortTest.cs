@@ -9,13 +9,13 @@ namespace CourseApp.Tests.Module2
     [Collection("Sequential")]
     public class PairSortTest
     {
-        private const string Inp1 = @"101 80
-305 90
+        private const string Inp1 = @"305 90
+101 80
 200 14";
 
         private const string Inp2 = @"20 90
-30 90
-25 90";
+25 90
+30 90";
 
         private const string Out1 = @"305 90
 101 80

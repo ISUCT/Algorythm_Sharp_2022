@@ -43,15 +43,14 @@ namespace CourseApp.Tests.Module2
         public void Checking_PairSort_Works_Correctly(string input, string expected)
         {
             // act
-            string[] buffer = input.Split("\r\n").ToArray();
+            string[] testingData = input.Split("\r\n").ToArray();
 
-            PairSort.PairBubbleSortMethod(buffer);
+            PairSort.PairBubbleSortMethod(testingData);
 
             // assert
             var output = File.ReadAllText("output.txt");
             Assert.Equal($"{expected}", output);
-
-           // File.Delete("output.txt");
+            File.Delete("output.txt");
         }
     }
 }

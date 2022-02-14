@@ -50,7 +50,8 @@ namespace CourseApp.Tests.Module2
             // assert
             var output = File.ReadAllText("output.txt");
             Assert.Equal($"{expected}", output);
-            File.Delete("output.txt");
+
+           // File.Delete("output.txt");
         }
     }
 }

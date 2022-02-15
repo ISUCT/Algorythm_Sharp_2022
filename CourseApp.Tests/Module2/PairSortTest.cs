@@ -35,10 +35,6 @@ namespace CourseApp.Tests.Module2
 
             string answer = string.Join("\r\n", PairSort.PairBubbleSortMethod(testingData));
 
-            StreamWriter check = new StreamWriter("../../../output.txt");
-            check.WriteLine(answer);
-            check.Close();
-
             // assert
             Assert.Equal($"{expected}", answer);
         }

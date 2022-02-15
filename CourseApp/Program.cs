@@ -1,5 +1,4 @@
 ﻿using System;
-using CourseApp.Module2;
 
 namespace CourseApp
 {

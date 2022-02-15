@@ -72,8 +72,7 @@ namespace CourseApp.Module2
             for (int i = 0; i < n; i++)
             {
                 result = arr[i, 0] + " " + arr[i, 1];
-                Console.Write(result);
-                Console.WriteLine();
+                Console.WriteLine(result);
             }
         }
 

@@ -12,20 +12,24 @@ public class PairSortTest : IDisposable
     private const string Inp1 = @"3
 101 80
 305 90
-200 14";
+200 14
+";
 
     private const string Out1 = @"305 90
 101 80
-200 14";
+200 14
+";
 
     private const string Inp2 = @"3
 20 80
 30 90
-25 90";
+25 90
+";
 
     private const string Out2 = @"25 90
 30 90
-20 80";
+20 80
+";
 
     public void Dispose()
     {
@@ -51,9 +55,7 @@ public class PairSortTest : IDisposable
         PairSort.Sort();
 
         // assert
-        var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-        var result = string.Join(Environment.NewLine, output);
-
-        Assert.Equal($"{expected}", result);
+        var output = stringWriter.ToString();
+        Assert.Equal($"{expected}", output);
     }
 }

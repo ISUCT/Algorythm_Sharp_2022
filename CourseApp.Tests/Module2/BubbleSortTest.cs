@@ -11,8 +11,31 @@ namespace CourseApp.Tests.Module2
         private const string Inp1 = @"7
 5 1 7 3 9 4 1";
 
-        private const string Inp2 = @"3
--10 7 2";
+        private const string Out1 = @"
+5 1 7 3 4 9 1
+5 1 7 3 4 1 9
+5 1 3 7 4 1 9
+5 1 3 4 7 1 9
+5 1 3 4 1 7 9
+1 5 3 4 1 7 9
+1 3 5 4 1 7 9
+1 3 4 5 1 7 9
+1 3 4 1 5 7 9
+1 3 1 4 5 7 9
+1 1 3 4 5 7 9
+";
+
+        private const string Inp2 = @"4
+4 3 2 1";
+
+        private const string Out2 = @"
+3 4 2 1
+3 2 4 1
+3 2 1 4
+2 3 1 4
+2 1 3 4
+1 2 3 4
+";
 
         public void Dispose()
         {
@@ -24,8 +47,8 @@ namespace CourseApp.Tests.Module2
         }
 
         [Theory]
-        [InlineData(Inp1, "1 1 3 4 5 7 9")]
-        [InlineData(Inp2, "-10 2 7")]
+        [InlineData(Inp1, Out1)]
+        [InlineData(Inp2, Out2)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

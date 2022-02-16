@@ -8,31 +8,33 @@ namespace CourseApp.Module2
     {
         public static void BubbleSortMethod()
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
+            int numbers = int.Parse(Console.ReadLine());
+            string str = Console.ReadLine();
+            string[] arrayStr = str.Split(' ');
+            int[] array = new int[numbers];
+            bool sTrue = false;
+            for (int i = 0; i < numbers; i++)
             {
-                arr[i] = int.Parse(sValues[i]);
+                array[i] = int.Parse(arrayStr[i]);
             }
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            for (int i = 0; i < numbers - 1; i++)
             {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                for (int j = 0; j < numbers - i - 1; j++)
                 {
-                    if (arr[j] > arr[j + 1])
+                    if (array[j] > array[j + 1])
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        (array[j], array[j + 1]) = (array[j + 1], array[j]);
+                        Console.WriteLine(string.Join(" ", array));
+                        sTrue = true;
                     }
                 }
             }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+            if (sTrue == false)
+            {
+                Console.WriteLine(0);
+            }
         }
     }
 }

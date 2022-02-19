@@ -7,8 +7,9 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            MergeSort.Try();
+            InversionSort.Try();
 
+            // MergeSort.Try();
             // BubbleSort.BubbleSortMethod();
             /*BubbleSortPair.BubbleSortMethod();*/
         }

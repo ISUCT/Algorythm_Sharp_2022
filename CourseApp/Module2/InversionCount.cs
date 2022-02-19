@@ -2,15 +2,16 @@
 
 namespace CourseApp.Module2
 {
-    public class MergeSort
+    public class InversionCount
     {
-        public static void MergeSortMethod()
+        private static long count = 0;
+
+        public static void CountInversion()
         {
             int[] arr = InputParse();
 
             int[] sortedArr = ArrSort(ref arr, 0, arr.Length);
-
-            Console.WriteLine("{0}", string.Join(" ", sortedArr));
+            Console.WriteLine(count / 2);
         }
 
         public static int[] Merge(ref int[] left, ref int[] right)
@@ -37,6 +38,7 @@ namespace CourseApp.Module2
                 }
                 else
                 {
+                    count += left.Length - i;
                     add[k] = right[j];
                     j++;
                 }
@@ -60,8 +62,6 @@ namespace CourseApp.Module2
             int[] right = ArrSort(ref arr, mid, end);
 
             int[] sort = Merge(ref left, ref right);
-
-            Console.WriteLine("{0} {1} {2} {3}", begin + 1, end, sort[0], sort[^1]);
 
             return Merge(ref left, ref right);
         }

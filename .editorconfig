@@ -2,3 +2,6 @@
 
 # IDE0005: Директива using не нужна.
 dotnet_diagnostic.IDE0005.severity = none
+
+# IDE0051: Удалите неиспользуемые закрытые члены
+dotnet_diagnostic.IDE0051.severity = none

@@ -12,17 +12,17 @@
         private const string Inp1 = @"1
 1";
 
-        private const string Out1 = @"0";
+        private const string Out1 = "0";
 
         private const string Inp2 = @"2
 3 1";
 
-        private const string Out2 = @"1";
+        private const string Out2 = "1";
 
         private const string Inp3 = @"5
 5 4 3 2 1";
 
-        private const string Out3 = @"10";
+        private const string Out3 = "10";
 
         public void Dispose()
         {
@@ -35,47 +35,9 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        public void Test1(string input, string expected)
-        {
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
-
-            var stringReader = new StringReader(input);
-            Console.SetIn(stringReader);
-
-            // act
-            InversionCount.CountInversion();
-
-            // assert
-            var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-            var result = string.Join(Environment.NewLine, output);
-
-            Assert.Equal($"{expected}", result);
-        }
-
-        [Theory]
         [InlineData(Inp2, Out2)]
-        public void Test2(string input, string expected)
-        {
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
-
-            var stringReader = new StringReader(input);
-            Console.SetIn(stringReader);
-
-            // act
-            InversionCount.CountInversion();
-
-            // assert
-            var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-            var result = string.Join(Environment.NewLine, output);
-
-            Assert.Equal($"{expected}", result);
-        }
-
-        [Theory]
         [InlineData(Inp3, Out3)]
-        public void Test3(string input, string expected)
+        public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);

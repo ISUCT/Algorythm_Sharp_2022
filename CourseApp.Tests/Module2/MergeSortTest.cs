@@ -18,6 +18,17 @@
 1 5 1 5
 1 2 3 4 5";
 
+        private const string Inp2 = @"1
+1";
+
+        private const string Out2 = @"1";
+
+        private const string Inp3 = @"2
+3 1";
+
+        private const string Out3 = @"1 2 1 3
+1 3";
+
         public void Dispose()
         {
             var standardOut = new StreamWriter(Console.OpenStandardOutput());
@@ -29,6 +40,8 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
+        [InlineData(Inp2, Out2)]
+        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

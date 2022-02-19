@@ -13,7 +13,7 @@ namespace CourseApp.Module2
             Console.WriteLine("{0}", string.Join(" ", sortedArr));
         }
 
-        public static int[] Merge(ref int[] left, ref int[] right)
+        private static int[] Merge(ref int[] left, ref int[] right)
         {
             int i = 0;
             int j = 0;
@@ -25,12 +25,7 @@ namespace CourseApp.Module2
                     add[k] = right[j];
                     j++;
                 }
-                else if (j == right.Length)
-                {
-                    add[k] = left[i];
-                    i++;
-                }
-                else if (left[i] <= right[j])
+                else if (j == right.Length || left[i] <= right[j])
                 {
                     add[k] = left[i];
                     i++;

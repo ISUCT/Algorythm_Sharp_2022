@@ -8,7 +8,8 @@ namespace CourseApp
         public static void Main(string[] args)
         {
             /*BubbleSort.BubbleSortMeth();*/
-            SortingPairs.BubbleSortMeth();
+            /*SortingPairs.BubbleSortMeth();*/
+            MergeSort.ClassMain();
         }
     }
 }

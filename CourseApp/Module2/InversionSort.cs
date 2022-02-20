@@ -8,9 +8,10 @@ namespace CourseApp.Module2
 {
     public class InversionSort
     {
-        public static (int[], int) Merge(int[] a, int[] b)
+        private static long inversion = 0;
+
+        public static int[] Merge(int[] a, int[] b)
         {
-            int inversion = 0;
             int i = 0;
             int j = 0;
             int[] c = new int[a.Length + b.Length];
@@ -39,29 +40,26 @@ namespace CourseApp.Module2
                 }
             }
 
-            return (c, inversion);
+            return c;
         }
 
-        public static (int[], int) Merge_sort(int[] v, int l, int r)
+        public static int[] Merge_sort(int[] v, int l, int r)
         {
             if (r - l == 1)
             {
                 int[] res = new int[1];
                 res[0] = v[l];
-                return (res, 0);
+                return res;
             }
 
-            int inversion = 0;
-            int left_inversion = 0;
-            int right_inversion = 0;
             int m = (l + r) / 2;
 
-            (int[] left, left_inversion) = Merge_sort(v, l, m);
-            (int[] right, right_inversion) = Merge_sort(v, m, r);
+            int[] left = Merge_sort(v, l, m);
+            int[] right = Merge_sort(v, m, r);
 
-            (int[] sort, inversion) = Merge(left, right);
+            int[] sort = Merge(left, right);
 
-            return (sort, left_inversion + inversion + right_inversion);
+            return sort;
         }
 
         public static void Try()
@@ -75,9 +73,7 @@ namespace CourseApp.Module2
                 arr[i] = int.Parse(sValues[i]);
             }
 
-            int inversion = 0;
-
-            (int[] v_sorted, inversion) = Merge_sort(arr, 0, n);
+            int[] v_sorted = Merge_sort(arr, 0, n);
 
             Console.WriteLine(inversion);
         }

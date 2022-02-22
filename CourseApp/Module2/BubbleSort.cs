@@ -7,12 +7,7 @@ namespace CourseApp.Module2
     {
         public static void BubbleSortMethod()
         {
-            int[] array = new int[Convert.ToInt32(Console.ReadLine())];
-            string[] s = Console.ReadLine().Split(' ');
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = Convert.ToInt32(s[i]);
-            }
+            int[] array = InputHandler.ArrayHandler();
 
             StringBuilder sb = new StringBuilder();
             bool swaps = false;
@@ -33,10 +28,6 @@ namespace CourseApp.Module2
             if (swaps == false)
             {
                 Console.WriteLine(0);
-            }
-            else
-            {
-                swaps = false;
             }
         }
     }

@@ -12,22 +12,24 @@
         private const string Inp1 = @"1
 1";
 
-        private const string Out1 = "0";
+        private const string Out1 = @"0";
 
         private const string Inp2 = @"2
 3 1";
 
-        private const string Out2 = "1";
+        private const string Out2 = @"1";
 
         private const string Inp3 = @"5
 5 4 3 2 1";
 
-        private const string Out3 = "10";
+        private const string Out3 = @"10";
 
         public void Dispose()
         {
-            var standardOut = new StreamWriter(Console.OpenStandardOutput());
-            standardOut.AutoFlush = true;
+            var standardOut = new StreamWriter(Console.OpenStandardOutput())
+            {
+                AutoFlush = true
+            };
             var standardIn = new StreamReader(Console.OpenStandardInput());
             Console.SetOut(standardOut);
             Console.SetIn(standardIn);
@@ -37,6 +39,7 @@
         [InlineData(Inp1, Out1)]
         [InlineData(Inp2, Out2)]
         [InlineData(Inp3, Out3)]
+
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

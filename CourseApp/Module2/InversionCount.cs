@@ -9,9 +9,9 @@ namespace CourseApp.Module2
         public static void CountInversion()
         {
             int[] arr = InputParse();
-            int[] sortedArr = ArrSort(ref arr, 0, arr.Length);
+            ArrSort(ref arr);
 
-            Console.WriteLine(count / 2);
+            Console.WriteLine(count);
         }
 
         private static int[] Merge(ref int[] left, ref int[] right)
@@ -21,12 +21,7 @@ namespace CourseApp.Module2
             int[] add = new int[left.Length + right.Length];
             for (int k = 0; k < add.Length; k++)
             {
-                if (i == left.Length)
-                {
-                    add[k] = right[j];
-                    j++;
-                }
-                else if (j == right.Length || left[i] <= right[j])
+                if (j == right.Length || (i < left.Length && left[i] <= right[j]))
                 {
                     add[k] = left[i];
                     i++;
@@ -42,22 +37,30 @@ namespace CourseApp.Module2
             return add;
         }
 
-        private static int[] ArrSort(ref int[] arr, int begin, int end)
+        private static int[] ArrSort(ref int[] arr)
         {
-            if (end - begin == 1)
+            if (arr.Length < 2)
             {
-                int[] res = new int[1];
-                res[0] = arr[begin];
-                return res;
+                return arr;
             }
 
-            int mid = (begin + end) / 2;
+            int mid = arr.Length / 2;
 
-            int[] left = ArrSort(ref arr, begin, mid);
-            int[] right = ArrSort(ref arr, mid, end);
+            int[] left = new int[mid];
+            int[] right = new int[arr.Length - mid];
 
-            int[] sort = Merge(ref left, ref right);
+            for (int i = 0; i < left.Length; i++)
+            {
+                left[i] = arr[i];
+            }
 
+            for (int i = 0; i < right.Length; i++)
+            {
+                right[i] = arr[mid + i];
+            }
+
+            left = ArrSort(ref left);
+            right = ArrSort(ref right);
             return Merge(ref left, ref right);
         }
 

@@ -21,8 +21,10 @@
 
         public void Dispose()
         {
-            var standardOut = new StreamWriter(Console.OpenStandardOutput());
-            standardOut.AutoFlush = true;
+            var standardOut = new StreamWriter(Console.OpenStandardOutput())
+            {
+                AutoFlush = true
+            };
             var standardIn = new StreamReader(Console.OpenStandardInput());
             Console.SetOut(standardOut);
             Console.SetIn(standardIn);

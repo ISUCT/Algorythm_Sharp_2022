@@ -7,7 +7,9 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            NumbDiff.Try();
+            Warehouse.Try();
+
+            /*NumbDiff.Try();*/
 
             /*InversionSort.Try();*/
 

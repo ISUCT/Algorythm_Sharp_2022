@@ -5,38 +5,33 @@ public class PairSort
     public static void PairSortMethod()
     {
         int numberOfElements = int.Parse(Console.ReadLine());
-        string[][] arrayOfElements = new string[numberOfElements][];
-
-        for (int i = 0; i < numberOfElements; i++)
+        string[][] array = new string[numberOfElements][];
+        string[] value = Console.ReadLine().Split(new char[] { ' ' });
+        array[0] = value;
+        for (int i = 1; i < numberOfElements;  i++)
         {
-            string[] value = Console.ReadLine().Split(new char[] { ' ' });
-            arrayOfElements[i] = value;
-        }
+            string[] temp = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            array[i] = temp;
 
-        for (int l = 0; l < numberOfElements - 1; l++)
-        {
-            for (int k = 0; k < numberOfElements - 1; k++)
+            for (int j = 0; j < i; j++)
             {
-                if (Convert.ToInt32(arrayOfElements[k][1]) < Convert.ToInt32(arrayOfElements[k + 1][1]))
+                if (int.Parse(array[j][1]) < int.Parse(array[i][1]))
                 {
-                    (arrayOfElements[k], arrayOfElements[k + 1]) = (arrayOfElements[k + 1], arrayOfElements[k]);
+                    (array[j], array[i]) = (array[i], array[j]);
                 }
-                else if (arrayOfElements[k][1] == arrayOfElements[k + 1][1])
+                else if (int.Parse(array[j][1]) == int.Parse(array[i][1]))
                 {
-                    if (Convert.ToInt32(arrayOfElements[k][0]) > Convert.ToInt32(arrayOfElements[k + 1][0]))
+                    if (int.Parse(array[j][0]) > int.Parse(array[i][0]))
                     {
-                        (arrayOfElements[k], arrayOfElements[k + 1]) = (arrayOfElements[k + 1], arrayOfElements[k]);
+                        (array[j], array[i]) = (array[i], array[j]);
                     }
                 }
             }
         }
 
-        for (int p = 0; p < numberOfElements; p++)
+        for (int i = 0; i < numberOfElements; i++)
         {
-            string result = string.Join(" ", arrayOfElements[p]);
-            Console.WriteLine(result);
+            Console.WriteLine(array[i][0] + " " + array[i][1]);
         }
-
-        Console.WriteLine();
     }
 }

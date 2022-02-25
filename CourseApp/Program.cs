@@ -5,7 +5,8 @@
         private static void Main()
         {
             // BubbleSort.BubbleSortMethod();
-            PairSort.PairSortMethod();
+            // PairSort.PairSortMethod();
+            MergeSort.MergeSortMethod();
         }
     }
 }

@@ -5,7 +5,7 @@
     using Xunit;
 
     [Collection("Sequential")]
-public class PairSortTest : IDisposable
+public class PairTest : IDisposable
 {
     private const string Inp1 = @"3
 101 80
@@ -14,7 +14,8 @@ public class PairSortTest : IDisposable
 
     private const string Out1 = @"305 90
 101 80
-200 14";
+200 14
+";
 
     private const string Inp2 = @"3
 20 80
@@ -23,7 +24,8 @@ public class PairSortTest : IDisposable
 
     private const string Out2 = @"25 90
 30 90
-20 80";
+20 80
+";
 
     public void Dispose()
     {
@@ -49,7 +51,7 @@ public class PairSortTest : IDisposable
         PairSort.PairSortMethod();
 
         // assert
-        var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+        var output = stringWriter.ToString();
         var result = string.Join(Environment.NewLine, output);
 
         Assert.Equal($"{expected}", result);

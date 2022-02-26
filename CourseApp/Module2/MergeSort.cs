@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace CourseApp.Module2;
 
@@ -7,7 +8,8 @@ public class MergeSort
     public static void Sort()
     {
         var array = InputHandler.ArrayHandler();
-        Sort(array);
+        var sortedArray = Sort(array);
+        Console.WriteLine(string.Join(" ", sortedArray));
     }
 
     private static int[] Sort(int[] array)
@@ -20,7 +22,6 @@ public class MergeSort
             if (leftArray.Length > 1)
             {
                 leftArray = Sort(leftArray);
-                Console.Write(array[0] + " " + array[^1]);
             }
 
             if (rightArray.Length > 1)
@@ -31,7 +32,6 @@ public class MergeSort
             array = Merge(leftArray, rightArray);
         }
 
-        Console.WriteLine(array[0] + " " + array[^1]);
         return array;
     }
 

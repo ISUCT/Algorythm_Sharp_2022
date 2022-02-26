@@ -1,27 +1,34 @@
-﻿using System;
-using System.IO;
-using Xunit;
-using CourseApp.Module2;
+using Module2;
 
 namespace CourseApp.Tests.Module2;
 
-[Collection("Sequential")]
-public class BubbleSortTest : IDisposable
-{
-    private const string Inp1 = @"4
-6 2 3 1";
+using System;
+using System.IO;
+using Xunit;
 
-    private const string Out1 = @"2 6 3 1
-2 3 6 1
-2 3 1 6
-2 1 3 6
-1 2 3 6
+[Collection("Sequential")]
+public class PairSortTest : IDisposable
+{
+    private const string Inp1 = @"3
+101 80
+305 90
+200 14
 ";
 
-    private const string Inp2 = @"4
-1 2 5 7";
+    private const string Out1 = @"305 90
+101 80
+200 14
+";
 
-    private const string Out2 = @"0
+    private const string Inp2 = @"3
+20 80
+30 90
+25 90
+";
+
+    private const string Out2 = @"25 90
+30 90
+20 80
 ";
 
     public void Dispose()
@@ -45,7 +52,7 @@ public class BubbleSortTest : IDisposable
         Console.SetIn(stringReader);
 
         // act
-        BubbleSort.BubbleSortMethod();
+        PairSort.Sort();
 
         // assert
         var output = stringWriter.ToString();

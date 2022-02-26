@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace CourseApp.Module2
@@ -8,31 +7,28 @@ namespace CourseApp.Module2
     {
         public static void BubbleSortMethod()
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                arr[i] = int.Parse(sValues[i]);
-            }
+            var array = InputHandler.ArrayHandler();
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            var sb = new StringBuilder();
+            var swaps = false;
+            for (var i = 0; i < array.Length; ++i)
             {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                for (var j = 0; j < array.Length - i - 1; ++j)
                 {
-                    if (arr[j] > arr[j + 1])
+                    if (array[j] > array[j + 1])
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        (array[j], array[j + 1]) = (array[j + 1], array[j]);
+                        Console.WriteLine("{0}", sb.AppendJoin(" ", array));
+                        sb.Clear();
+                        swaps = true;
                     }
                 }
             }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+            if (swaps == false)
+            {
+                Console.WriteLine(0);
+            }
         }
     }
 }

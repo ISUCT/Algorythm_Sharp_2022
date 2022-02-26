@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <NoWarn>1573,1591,1701;1702;1705;</NoWarn>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <NoWarn>1573,1591,1701;1702;1705;</NoWarn>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
 
-   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="all" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
 
-  <PropertyGroup>
-    <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet> 
-    <GenerateFullPaths>true</GenerateFullPaths>
-  </PropertyGroup>
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>../_stylecop/stylecop.ruleset</CodeAnalysisRuleSet>
+        <GenerateFullPaths>true</GenerateFullPaths>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <AdditionalFiles Include="../_stylecop/stylecop.json" />
-  </ItemGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="../_stylecop/stylecop.json" />
+    </ItemGroup>
 
 </Project>

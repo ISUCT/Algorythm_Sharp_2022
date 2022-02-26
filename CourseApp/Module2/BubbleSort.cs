@@ -1,8 +1,4 @@
-﻿// This source code is Copyright © Test Company and MAY NOT be copied, reproduced,
-// published, distributed or transmitted to or stored in any manner without prior
-// written consent from Test Company (www.yourcompany.com).
-
-using System;
+﻿using System;
 
 public class BubbleSort
 {

@@ -7,18 +7,18 @@ namespace CourseApp.Module2
     {
         public static void BubbleSortMethod()
         {
-            int[] array = InputHandler.ArrayHandler();
+            var array = InputHandler.ArrayHandler();
 
-            StringBuilder sb = new StringBuilder();
-            bool swaps = false;
-            for (int i = 0; i < array.Length; ++i)
+            var sb = new StringBuilder();
+            var swaps = false;
+            for (var i = 0; i < array.Length; ++i)
             {
-                for (int j = 0; j < array.Length - i - 1; ++j)
+                for (var j = 0; j < array.Length - i - 1; ++j)
                 {
                     if (array[j] > array[j + 1])
                     {
                         (array[j], array[j + 1]) = (array[j + 1], array[j]);
-                        Console.WriteLine("{0}", sb.AppendJoin(" ", array).ToString());
+                        Console.WriteLine("{0}", sb.AppendJoin(" ", array));
                         sb.Clear();
                         swaps = true;
                     }

@@ -7,7 +7,8 @@
             // BubbleSort.BubbleSortMethod();
             // PairSort.PairSortMethod();
             // MergeSort.MergeSortMethod();
-            InversionCounter.InversionCounterMethod();
+            // InversionCounter.InversionCounterMethod();
+            CountDiff.CountDiffMethod();
         }
     }
 }

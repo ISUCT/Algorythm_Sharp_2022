@@ -11,7 +11,8 @@ namespace CourseApp
             // BubbleSort2.BubbleSort_2(); //
             // MergeSort.Go(); //
             // InversionSort.Enter(); //
-            QuickSort.Enter();
+            // QuickSort.Enter(); //
+            Warehouse.Enter();
         }
     }
 }

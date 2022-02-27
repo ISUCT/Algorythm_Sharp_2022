@@ -1,5 +1,4 @@
-﻿using System;
-using CourseApp.Module2;
+﻿using CourseApp.Module2;
 
 namespace CourseApp
 {
@@ -9,7 +8,8 @@ namespace CourseApp
         {
             /*BubbleSort.BubbleSortMeth();*/
             /*SortingPairs.BubbleSortMeth();*/
-            MergeSort.ClassMain();
+            /*MergeSort.ClassMain();*/
+            NumbDiff.ClassMain();
         }
     }
 }

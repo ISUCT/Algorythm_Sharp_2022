@@ -8,7 +8,8 @@
             // PairSort.PairSortMethod();
             // MergeSort.MergeSortMethod();
             // InversionCounter.InversionCounterMethod();
-            CountDiff.CountDiffMethod();
+            // CountDiff.CountDiffMethod();
+            Warehouse.Storage();
         }
     }
 }

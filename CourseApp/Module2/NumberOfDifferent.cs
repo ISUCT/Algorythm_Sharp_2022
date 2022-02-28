@@ -15,7 +15,7 @@ namespace CourseApp.Module2
             int x = int.Parse(Console.ReadLine());
             string line = Console.ReadLine();
             string[] v = line.Split(' ');
-            int[] arr = new int[n];
+            int[] arr = new int[x];
             int i;
             for (i = 0; i < x; i++)
             {

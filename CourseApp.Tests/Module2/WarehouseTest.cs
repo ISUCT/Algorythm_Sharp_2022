@@ -6,17 +6,18 @@ using CourseApp.Module2;
 namespace CourseApp.Tests.Module2
 {
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class WarehouseTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"5
+1 50 3 4 3
+16
+1 2 3 4 5 1 3 3 4 5 5 5 5 5 4 5";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"yes
+no
+no
+no
+yes";
 
         public void Dispose()
         {
@@ -39,7 +40,7 @@ namespace CourseApp.Tests.Module2
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            Warehouse.WarehouseMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

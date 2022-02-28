@@ -36,5 +36,10 @@ namespace CourseApp.Module2
                 Console.WriteLine(0);
             }
         }
+
+        // public static void Main()
+        // {
+        //    BubbleSortMethod();
+        // }
     }
 }

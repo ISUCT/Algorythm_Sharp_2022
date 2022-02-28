@@ -34,10 +34,7 @@
         }
 
         [Theory]
-        [InlineData(Inp1, Out1)]
         [InlineData(Inp2, Out2)]
-        [InlineData(Inp3, Out3)]
-
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

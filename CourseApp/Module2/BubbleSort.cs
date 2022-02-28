@@ -6,33 +6,39 @@ namespace CourseApp.Module2
 {
     public class BubbleSort
     {
-        public static void BubbleSortMethod()
+        public static void BubbleSortMeth()
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                arr[i] = int.Parse(sValues[i]);
-            }
+                int arr_size = int.Parse(Console.ReadLine());
+                string[] arr_str = Console.ReadLine().Split(' ');
+                int[] arr = new int[arr_size];
 
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                //Строковый массив в целочисенный массив
+                for(int i = 0; i < arr_size; ++i)
                 {
-                    if (arr[j] > arr[j + 1])
+                    arr[i] = int.Parse(arr_str[i]);
+                }
+
+                //Были перестановки или нет
+                bool flag = false;
+                //Сортировка
+                for(int i = 0; i < arr_size; ++i)
+                {
+                    for(int j = 0; j < arr_size - i - 1; ++j)
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        if(arr[j] > arr[j+1])
+                        {
+                            (arr[j], arr[j+1]) = (arr[j+1], arr[j]);
+                            string reslt = string.Join(" ", arr);
+                            Console.WriteLine(reslt);
+                            flag = true;
+                        }
                     }
                 }
-            }
-
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+                
+                if(flag == false)
+                {
+                    Console.WriteLine("0");
+                }
         }
     }
 }

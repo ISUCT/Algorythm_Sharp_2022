@@ -9,15 +9,10 @@
     [Collection("Sequential")]
     public class Invers_SortTest : IDisposable
     {
-        private const string Inp1 = @"1
-1";
-
-        private const string Out1 = @"0";
-
-        private const string Inp2 = @"2
+        private const string Inp1 = @"2
 3 1";
 
-        private const string Out2 = @"1";
+        private const string Out1 = @"1";
 
         public void Dispose()
         {
@@ -30,7 +25,6 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

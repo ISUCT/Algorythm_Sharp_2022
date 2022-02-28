@@ -7,8 +7,6 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
-
             Console.WriteLine("Hello World");
         }
     }

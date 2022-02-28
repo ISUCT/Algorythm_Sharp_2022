@@ -8,7 +8,11 @@ namespace CourseApp
         public static void Main(string[] args)
         {
             // BubbleSort.BubbleSortM(); //
-            BubbleSortP.BubbleSortM();
+            // BubbleSortP.BubbleSortM(); //
+            // Sort_Merge.Try(); //
+            // Invers_Sort.Try(); //
+            // Count_Dif.Try(); //
+            Storage_Sort.Try();
         }
     }
 }

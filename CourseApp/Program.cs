@@ -9,7 +9,8 @@
             // MergeSort.MergeSortMethod();
             // InversionCounter.InversionCounterMethod();
             // CountDiff.CountDiffMethod();
-            Warehouse.Storage();
+            // Warehouse.Storage();
+            RadixSort.RadixSortMethod();
         }
     }
 }

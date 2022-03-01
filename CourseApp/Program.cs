@@ -7,7 +7,7 @@ public class Program
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
+            Task5.Task5_Main();
         }
     }
 }

@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CourseApp.Module2;
 
-namespace CourseApp.Tests.Module2
+namespace CourseApp
 {
-    class pairsTest
+    public class Program
     {
+        public static void Main(string[] args)
+        {
+            InversionS.MergeMain();
+        }
     }
 }

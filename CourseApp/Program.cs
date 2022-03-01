@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            Inversion.CountInversions();
+            CountUnique.DoCount();
         }
     }
 }

@@ -10,7 +10,8 @@ namespace CourseApp
             /*SortingPairs.BubbleSortMeth();*/
             /*MergeSort.ClassMain();*/
             /*NumbDiff.ClassMain();*/
-            InversionSort.ClassMain();
+            /*InversionSort.ClassMain();*/
+            Warehouse.ClassMain();
         }
     }
 }

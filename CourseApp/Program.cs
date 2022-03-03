@@ -7,7 +7,7 @@ public class Program
     {
         public static void Main(string[] args)
         {
-            Task5.Task5_Main();
+            Task6.Task6_Main();
         }
     }
 }

@@ -8,20 +8,20 @@ namespace CourseApp.Tests.Module2
     [Collection("Sequential")]
     public class Task5Test : IDisposable
     {
-        private const string Inp1 = @"1
-1";
+        private const string Inp1 = @"2
+1 0";
 
-        private const string Inp2 = @"2
-3 1";
+        private const string Inp2 = @"3
+1 0 1";
 
         private const string Inp3 = @"5
-5 4 3 2 1";
+1 0 1 2 0";
 
-        private const string Out1 = @"0";
+        private const string Out1 = @"2";
 
-        private const string Out2 = @"1";
+        private const string Out2 = @"2";
 
-        private const string Out3 = @"10";
+        private const string Out3 = @"3";
 
         public void Dispose()
         {
@@ -44,7 +44,7 @@ namespace CourseApp.Tests.Module2
             Console.SetIn(stringReader);
 
             // act
-            Task5.Task5_Main();
+            Task5_v2.ClassMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

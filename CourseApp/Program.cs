@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            InversionS.MergeMain();
+            Task6Sort.Task6_Main();
         }
     }
 }

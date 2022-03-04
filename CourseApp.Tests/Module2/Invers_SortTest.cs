@@ -9,10 +9,20 @@
     [Collection("Sequential")]
     public class Invers_SortTest : IDisposable
     {
-        private const string Inp1 = @"2
+        private const string Inp1 = @"1
+1";
+
+        private const string Out1 = @"0";
+
+        private const string Inp2 = @"2
 3 1";
 
-        private const string Out1 = @"1";
+        private const string Out2 = @"1";
+
+        private const string Inp3 = @"5
+5 4 3 2 1";
+
+        private const string Out3 = @"10";
 
         public void Dispose()
         {

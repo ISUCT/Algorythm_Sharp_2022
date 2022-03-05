@@ -8,32 +8,19 @@ namespace CourseApp.Module2
 {
     public class RadixSort
     {
-        public static ulong GetMax(string[] arr_string, ulong n)
-        {
-            ulong max = ulong.Parse(arr_string[0]);
-            for (ulong i = 1; i < n; i++)
-            {
-                if (ulong.Parse(arr_string[i]) > max)
-                {
-                    max = ulong.Parse(arr_string[i]);
-                }
-            }
-
-            return max;
-        }
-
-        public static string[] CountSort(string[] arr_string, ulong n, ulong exp)
+        public static string[] CountSort(string[] arr_string, int phase, int len)
         {
             ulong i;
             List<string>[] arrayList = new List<string>[10];
-            for (i = 0; i < 10; i++)
+            for (int g = 0; g < 10; g++)
             {
-                arrayList[i] = new List<string>();
+                arrayList[g] = new List<string>();
             }
 
-            for (i = 0; i < n; i++)
+            for (int j = 0; j < arr_string.Length; j++)
             {
-                arrayList[(ulong.Parse(arr_string[i]) / exp) % 10].Add(arr_string[i]);
+                int k = int.Parse(arr_string[j].Substring(len - phase, 1));
+                arrayList[k].Add(arr_string[j]);
             }
 
             for (i = 0; i < 10; i++)
@@ -64,17 +51,17 @@ namespace CourseApp.Module2
 
         public static void Radixsort(string[] arr_string, ulong n)
         {
-            ulong m = GetMax(arr_string, n);
-            ulong numb_phaze = 1;
+            int numb_phaze = 1;
+            int rank = arr_string[0].Length;
 
             Console.WriteLine("Initial array:");
             Console.WriteLine("{0}", string.Join(", ", arr_string));
 
-            for (ulong exp = 1; m / exp > 0 && numb_phaze < 21; exp *= 10)
+            foreach (var i in Enumerable.Range(0, Convert.ToInt32(Math.Ceiling(Convert.ToDouble(-1 - (rank - 1)) / -1))).Select(x_1 => rank - 1 + (x_1 * -1)))
             {
                 Console.WriteLine("**********");
                 Console.WriteLine("Phase {0}", numb_phaze);
-                arr_string = CountSort(arr_string, n, exp);
+                arr_string = CountSort(arr_string, numb_phaze, rank);
                 numb_phaze++;
             }
 

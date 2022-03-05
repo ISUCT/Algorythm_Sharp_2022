@@ -14,15 +14,10 @@ namespace CourseApp.Tests.Module2
 
         private const string Out1 = @"0";
 
-        private const string Inp2 = @"2
-3 1";
-
-        private const string Out2 = @"1";
-
-        private const string Inp3 = @"5
+        private const string Inp2 = @"5
 5 4 3 2 1";
 
-        private const string Out3 = @"10";
+        private const string Out2 = @"10";
 
         public void Dispose()
         {
@@ -36,7 +31,6 @@ namespace CourseApp.Tests.Module2
         [Theory]
         [InlineData(Inp1, Out1)]
         [InlineData(Inp2, Out2)]
-        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();

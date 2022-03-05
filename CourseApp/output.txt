@@ -1,1 +1,5 @@
-100000
+yes
+no
+no
+no
+yes

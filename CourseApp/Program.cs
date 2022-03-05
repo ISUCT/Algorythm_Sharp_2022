@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            CountUnique.DoCount();
+            Purchase.CountPurcase();
         }
     }
 }

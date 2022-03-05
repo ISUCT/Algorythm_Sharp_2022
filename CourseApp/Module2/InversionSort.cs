@@ -14,20 +14,11 @@ namespace CourseApp.Module2
         {
             int i = 0;
             int j = 0;
+            int k = 0;
             int[] res = new int[a.Length + b.Length];
-            for (int k = 0; k < res.Length; k++)
+            while (k < res.Length)
             {
-                if (i == a.Length)
-                {
-                    res[k] = b[j];
-                    j++;
-                }
-                else if (j == b.Length)
-                {
-                    res[k] = a[i];
-                    i++;
-                }
-                else if (a[i] <= b[j])
+                if (j == b.Length || (i < a.Length && a[i] < b[j]))
                 {
                     res[k] = a[i];
                     i++;
@@ -38,6 +29,8 @@ namespace CourseApp.Module2
                     j++;
                     count += a.Length - i;
                 }
+
+                k++;
             }
 
             return res;

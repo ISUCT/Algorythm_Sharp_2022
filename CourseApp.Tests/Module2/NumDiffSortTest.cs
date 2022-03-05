@@ -7,17 +7,13 @@ using Xunit;
 namespace CourseApp.Tests.Module2
 {
     [Collection("Sequential")]
-    public class NumInversSortTest : IDisposable
+
+    public class NumDiffSortTest : IDisposable
     {
-        private const string Inp1 = @"1
-1";
+        private const string Inp1 = @"5
+1 0 1 2 0";
 
-        private const string Out1 = @"0";
-
-        private const string Inp3 = @"5
-5 4 3 2 1";
-
-        private const string Out3 = @"10";
+        private const string Out1 = @"3";
 
         public void Dispose()
         {
@@ -30,7 +26,6 @@ namespace CourseApp.Tests.Module2
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -40,7 +35,7 @@ namespace CourseApp.Tests.Module2
             Console.SetIn(stringReader);
 
             // act
-            NumInvers.NumInversion();
+            NumDiff.NumDifferent();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

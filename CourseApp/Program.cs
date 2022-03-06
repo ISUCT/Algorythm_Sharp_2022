@@ -7,9 +7,17 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
+            RadixSort.Try();
 
-            Console.WriteLine("Hello World");
+            /*WareHouse.CountInversion();*/
+
+            /* DifferentCount.CountDifferent();*/
+
+            /*InversionCount.CountInversion();*/
+
+            // MergeSort.MergeSortMethod();
+            // BubbleSort.SortOff();
+            /*PairSort.PairSortMetod();*/
         }
     }
 }

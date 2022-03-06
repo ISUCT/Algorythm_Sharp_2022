@@ -1,4 +1,5 @@
 ﻿using CourseApp.Module2;
+using CourseApp.Module3;
 
 namespace CourseApp
 {
@@ -11,7 +12,9 @@ namespace CourseApp
             /*MergeSort.ClassMain();*/
             /*NumbDiff.ClassMain();*/
             /*InversionSort.ClassMain();*/
-            Warehouse.ClassMain();
+            /*Warehouse.ClassMain();*/
+            /*RadixSort.ClassMain();*/
+            SearchSubstring.EnterValues();
         }
     }
 }

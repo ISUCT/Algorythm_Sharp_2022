@@ -1,4 +1,4 @@
-﻿namespace CourseApp.Module2
+﻿namespace CourseApp.Module3
 {
     public class Program
     {
@@ -10,7 +10,8 @@
             // InversionCounter.InversionCounterMethod();
             // CountDiff.CountDiffMethod();
             // Warehouse.Storage();
-            RadixSort.RadixSortMethod();
+            // RadixSort.RadixSortMethod();
+            FindSubstring.FindSubstringMethod();
         }
     }
 }

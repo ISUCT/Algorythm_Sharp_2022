@@ -8,19 +8,25 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            FindSubstring.EnterValues();
+            CircularString.EnterValues();
 
-           /* RadixSort.Try();*/
+            // PeriodString.EnterValues();
 
-            /*Warehouse.Try();*/
+            // FindSubstring.EnterValues();
 
-            /*NumbDiff.Try();*/
+            // RadixSort.Try();
 
-            /*InversionSort.Try();*/
+            // Warehouse.Try();
+
+            // NumbDiff.Try();
+
+            // InversionSort.Try();
 
             // MergeSort.Try();
+
             // BubbleSort.BubbleSortMethod();
-            /*BubbleSortPair.BubbleSortMethod();*/
+
+            // BubbleSortPair.BubbleSortMethod();
         }
     }
 }

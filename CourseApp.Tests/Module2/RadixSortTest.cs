@@ -19,7 +19,7 @@ namespace CourseApp.Tests.Module2
 35
 09";
 
-       /* private const string Inp2 = @"9
+       private const string Inp2 = @"9
 12
 32
 15
@@ -31,7 +31,7 @@ namespace CourseApp.Tests.Module2
 29
 61
 35
-09";*/
+09";
 
         private const string Out1 = @"Initial array:
 12, 32, 45, 67, 98, 29, 61, 35, 09
@@ -64,7 +64,7 @@ Sorted array:
 09, 12, 29, 32, 35, 45, 61, 67, 98
 ";
 
-      /*  private const string Out2 = @"Initial array:
+        private const string Out2 = @"Initial array:
 12, 32, 15, 77, 12, 11, 97, 98, 29
 **********
 Phase 1
@@ -94,7 +94,7 @@ Bucket 9: 97, 98
 Sorted array:
 11, 12, 12, 15, 29, 32, 77, 97, 98
 ";
-*/
+
         public void Dispose()
         {
             var standardOut = new StreamWriter(Console.OpenStandardOutput());

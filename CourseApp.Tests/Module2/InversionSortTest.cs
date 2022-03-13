@@ -1,4 +1,4 @@
-﻿namespace CourseApp.Tests.Module2
+namespace CourseApp.Tests.Module2
 {
     using System;
     using System.Collections.Generic;
@@ -7,22 +7,17 @@
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class InversionSortTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"1
+1";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"0";
 
-        private const string Inp2 = @"4
-1 2 3 4";
+        private const string Inp2 = @"5
+5 4 3 2 1";
 
-        private const string Out2 = @"0";
+        private const string Out2 = @"10";
 
         public void Dispose()
         {
@@ -45,7 +40,7 @@
             Console.SetIn(stringReader);
 
             // act
-            Bubble_Sort.Bubble_Sort_Method();
+            Inversion_Sort.Start();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

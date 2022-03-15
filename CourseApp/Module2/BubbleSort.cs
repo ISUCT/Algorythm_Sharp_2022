@@ -1,38 +1,52 @@
-﻿using System;
+﻿using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CourseApp.Module2
 {
     public class BubbleSort
     {
-        public static void BubbleSortMethod()
+        public static void DoBubbleSort()
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
+            StreamReader reader = new StreamReader("input.txt");
+            int size = int.Parse(reader.ReadLine());
+            string[] data = reader.ReadLine().Split(" ");
+            int[] array = new int[size];
+            int index = 0;
+            foreach (var item in data)
             {
-                arr[i] = int.Parse(sValues[i]);
+                array[index] = int.Parse(item);
+                index++;
             }
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            reader.Close();
+            BubbleSortMethod(array);
+        }
+
+        public static void BubbleSortMethod(int[] array)
+        {
+            StreamWriter output = new StreamWriter("output.txt");
+            bool trigger = false;
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                for (int j = 0; j < array.Length - i - 1; j++)
                 {
-                    if (arr[j] > arr[j + 1])
+                    if (array[j] > array[j + 1])
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        (array[j], array[j + 1]) = (array[j + 1], array[j]);
+                        output.WriteLine(string.Join(" ", array));
+                        trigger = true;
                     }
                 }
             }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+            if (!trigger)
+            {
+                output.WriteLine("0");
+            }
+
+            output.Close();
         }
     }
 }

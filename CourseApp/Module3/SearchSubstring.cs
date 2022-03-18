@@ -43,12 +43,12 @@ namespace CourseApp.Module3
             }
         }
 
-        public static void EnterValues()
+        public static void ClassMain()
         {
             string s = Console.ReadLine();
             string t = Console.ReadLine();
 
-            int p = 99999999 + 7;
+            int p = 9999999 + 7;
             int x = 26;
 
             Rabin_karp(s, t, p, x);

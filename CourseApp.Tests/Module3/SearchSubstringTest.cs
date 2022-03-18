@@ -33,7 +33,7 @@ aba";
             Console.SetIn(stringReader);
 
             // act
-            SearchSubstring.EnterValues();
+            SearchSubstring.ClassMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

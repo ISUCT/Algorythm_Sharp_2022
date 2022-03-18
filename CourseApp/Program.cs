@@ -11,7 +11,11 @@
             // CountDiff.CountDiffMethod();
             // Warehouse.Storage();
             // RadixSort.RadixSortMethod();
-            FindSubstring.FindSubstringMethod();
+            // FindSubstring.FindSubstringMethod();
+            // CyclicShift.CyclicShiftMethod();
+            // PeriodOfString.PeriodOfStringMethod();
+            CyclingString.CyclingStringMethod();
         }
+    }
     }
 }

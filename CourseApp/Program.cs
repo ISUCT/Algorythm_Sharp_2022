@@ -15,7 +15,8 @@ namespace CourseApp
             /*Warehouse.ClassMain();*/
             /*RadixSort.ClassMain();*/
             /*SearchSubstring.ClassMain();*/
-            PeriodOfString.ClassMain();
+            /*PeriodOfString.ClassMain();*/
+            CyclicString.ClassMain();
         }
     }
 }

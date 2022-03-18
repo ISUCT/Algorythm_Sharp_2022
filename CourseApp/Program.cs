@@ -14,7 +14,8 @@ namespace CourseApp
             /*InversionSort.ClassMain();*/
             /*Warehouse.ClassMain();*/
             /*RadixSort.ClassMain();*/
-            SearchSubstring.EnterValues();
+            /*SearchSubstring.ClassMain();*/
+            PeriodOfString.ClassMain();
         }
     }
 }

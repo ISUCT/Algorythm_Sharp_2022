@@ -8,7 +8,9 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            CircularString.EnterValues();
+            CyclicShift.EnterValues();
+
+            // CircularString.EnterValues();
 
             // PeriodString.EnterValues();
 

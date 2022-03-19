@@ -12,10 +12,9 @@
             // Warehouse.Storage();
             // RadixSort.RadixSortMethod();
             // FindSubstring.FindSubstringMethod();
-            // CyclicShift.CyclicShiftMethod();
             // PeriodOfString.PeriodOfStringMethod();
-            CyclingString.CyclingStringMethod();
+            // CyclingString.CyclingStringMethod();
+            CyclicShift.CyclicShiftMethod();
         }
-    }
     }
 }

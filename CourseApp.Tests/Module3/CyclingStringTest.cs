@@ -33,7 +33,7 @@
             Console.SetIn(stringReader);
 
             // act
-            CyclicShift.CyclicShiftMethod();
+            CyclingString.CyclingStringMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

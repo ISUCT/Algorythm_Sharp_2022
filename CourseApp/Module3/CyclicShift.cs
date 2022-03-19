@@ -6,43 +6,68 @@ public class CyclicShift
     {
         string subString = Console.ReadLine();
         string basedString = Console.ReadLine();
+        subString = ReverseString(subString);
+        basedString = ReverseString(basedString);
+        int numberOfValues = 26;
+        int maxLength = 50001;
 
-        if (basedString.GetHashCode() == subString.GetHashCode())
+        Console.WriteLine(FindShifting(subString, basedString, numberOfValues, maxLength));
+    }
+
+    public static int FindShifting(string subString, string basedString, int numberOfValues, int maxLength)
+    {
+        int hashB = GetHash(basedString, basedString.Length, maxLength, numberOfValues);
+        int hashS = GetHash(subString, subString.Length, maxLength, numberOfValues);
+        int xt = 1;
+
+        if (hashB == hashS)
         {
-            Console.WriteLine(0);
+            return 0;
+        }
+        else if (subString.Length == 1)
+        {
+            return -1;
         }
         else
         {
-            Console.WriteLine(FindShifting(subString, basedString));
-        }
-    }
+            basedString = subString + subString;
 
-    public static int FindShifting(string s, string t)
-    {
-        for (int i = 0; i < s.Length; i++)
-        {
-            char temp1 = s[s.Length - 1];
-            string temp2 = s.Substring(0, s.Length - 1);
-            s = temp1 + temp2;
-            if (Equal(s, t) == true)
+            for (int i = 0; i < subString.Length; i++)
             {
-                return i + 1;
+                xt = (xt * numberOfValues) % maxLength;
+            }
+
+            for (int i = 1; i < subString.Length + 1; i++)
+            {
+                if (hashB == hashS)
+                {
+                    return i - 1;
+                }
+
+                hashS = ((hashS * numberOfValues) - (subString[i - 1] * xt) + basedString[i + subString.Length - 1]) % maxLength;
+                hashS = (hashS + maxLength) % maxLength;
             }
         }
 
         return -1;
     }
 
-    public static bool Equal(string s, string t)
+    public static int GetHash(string s, int lengthOfString, int maxLength, int numberOfValues)
     {
-        int hashS = s.GetHashCode();
-        int hashT = t.GetHashCode();
+        int result = 0;
 
-        if (hashS == hashT)
+        for (int i = 0; i < lengthOfString; i++)
         {
-            return true;
+            result = ((result * numberOfValues) + s[i]) % maxLength;
         }
 
-        return false;
+        return result;
+    }
+
+    public static string ReverseString(string s)
+    {
+        char[] arr = s.ToCharArray();
+        Array.Reverse(arr);
+        return new string(arr);
     }
 }

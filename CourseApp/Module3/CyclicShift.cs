@@ -9,7 +9,7 @@ public class CyclicShift
         subString = ReverseString(subString);
         basedString = ReverseString(basedString);
         int numberOfValues = 26;
-        int maxLength = 50001;
+        int maxLength = 10000000 - 7;
 
         Console.WriteLine(FindShifting(subString, basedString, numberOfValues, maxLength));
     }

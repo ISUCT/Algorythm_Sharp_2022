@@ -14,7 +14,8 @@
             // FindSubstring.FindSubstringMethod();
             // PeriodOfString.PeriodOfStringMethod();
             // CyclingString.CyclingStringMethod();
-            CyclicShift.CyclicShiftMethod();
+            // CyclicShift.CyclicShiftMethod();
+            GetPSP.GetPSPMethod();
         }
     }
 }

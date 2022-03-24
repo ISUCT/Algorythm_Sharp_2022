@@ -24,13 +24,13 @@ public class GetPSP
             }
         }
 
-        Console.WriteLine(counter + Stack.Size());
         Stack.Clear();
+        Console.WriteLine(counter + Stack.Size());
     }
 
     internal class Stack
     {
-        private static int[] buffer = new int[101];
+        private static int[] buffer = new int[100000001];
         private static int top = -1;
 
         public static void Push(int a)

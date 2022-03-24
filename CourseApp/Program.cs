@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            RabinCarp.RabinCarpMethod();
+            PeriodString.PeriodStringMethod();
         }
     }
 }

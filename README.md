@@ -1,4 +1,4 @@
-# Algrorithm 2022
+# Algorythm 2022
 
 Butusov Alexander Olegovich
 

@@ -5,7 +5,7 @@
     using Xunit;
 
     [Collection("Sequential")]
-    public class GivePSPTest : IDisposable
+    public class GetPSPTest : IDisposable
     {
         private const string Inp1 = @"())(()
 ";

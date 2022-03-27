@@ -28,7 +28,7 @@ public class GetPSP
         Console.WriteLine(counter + Stack.Size());
     }
 
-    internal class Stack
+    private class Stack
     {
         private static int[] buffer = new int[100000001];
         private static int top = -1;
@@ -37,12 +37,6 @@ public class GetPSP
         {
             top++;
             buffer[top] = a;
-        }
-
-        public static int Pop()
-        {
-            top--;
-            return buffer[top];
         }
 
         public static bool Empty()

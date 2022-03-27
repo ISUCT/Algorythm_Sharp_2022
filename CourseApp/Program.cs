@@ -15,7 +15,8 @@
             // PeriodOfString.PeriodOfStringMethod();
             // CyclingString.CyclingStringMethod();
             // CyclicShift.CyclicShiftMethod();
-            GetPSP.GetPSPMethod();
+            // GetPSP.GetPSPMethod();
+            Paths.PathsMethod();
         }
     }
 }

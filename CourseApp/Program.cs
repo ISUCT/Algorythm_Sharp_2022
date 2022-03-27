@@ -16,7 +16,8 @@
             // CyclingString.CyclingStringMethod();
             // CyclicShift.CyclicShiftMethod();
             // GetPSP.GetPSPMethod();
-            Paths.PathsMethod();
+            // Paths.PathsMethod();
+            NearestSmaller.NearestSmallerMehod();
         }
     }
 }

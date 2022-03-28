@@ -1,6 +1,7 @@
 ﻿using System;
 using CourseApp.Module2;
 using CourseApp.Module3;
+using CourseApp.Module4;
 
 namespace CourseApp
 {
@@ -8,7 +9,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            CyclicShift.EnterValues();
+            // CyclicShift.EnterValues();
 
             // CircularString.EnterValues();
 
@@ -29,6 +30,7 @@ namespace CourseApp
             // BubbleSort.BubbleSortMethod();
 
             // BubbleSortPair.BubbleSortMethod();
+            PSP.GetPSP();
         }
     }
 }

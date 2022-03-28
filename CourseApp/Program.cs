@@ -6,7 +6,6 @@
     {
         public static void Main(string[] args)
         {
-            RadixSort.RadixSortMethod();
         }
     }
 }

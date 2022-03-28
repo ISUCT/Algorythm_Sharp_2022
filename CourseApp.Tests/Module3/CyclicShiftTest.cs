@@ -6,10 +6,9 @@
     using Xunit;
 
     [Collection("Sequential")]
-    public class CyclicStringTest : IDisposable
+    public class CyclicShiftTest : IDisposable
     {
         private const string Inp1 = @"z";
-
         private const string Out1 = @"1";
 
         public void Dispose()
@@ -23,7 +22,7 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        public void CyclicStringTestMethod(string input, string expected)
+        public void PeriodStringTestMethod(string input, string expected)
         {
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);

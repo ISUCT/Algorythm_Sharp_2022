@@ -1,13 +1,12 @@
-﻿using System;
-using CourseApp.Module3;
-
-namespace CourseApp
+﻿namespace CourseApp
 {
+    using CourseApp.Module2;
+
     public class Program
     {
         public static void Main(string[] args)
         {
-            CyclicString.CyclicStringMethod();
+            RadixSort.RadixSortMethod();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CourseApp.Tests.Module3
+﻿namespace CourseApp.Tests.Module4
 {
     using System;
     using System.IO;
@@ -33,7 +33,7 @@
             Console.SetIn(stringReader);
 
             // act
-            NearestSmaller.NearestSmallerMehod();
+            NearestSmaller.NearestSmallerMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

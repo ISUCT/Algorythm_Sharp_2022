@@ -17,7 +17,7 @@
             // CyclicShift.CyclicShiftMethod();
             // GetPSP.GetPSPMethod();
             // Paths.PathsMethod();
-            NearestSmaller.NearestSmallerMehod();
+            NearestSmaller.NearestSmallerMethod();
         }
     }
 }

@@ -7,16 +7,6 @@
     [Collection("Sequential")]
     public class GetPSPTest : IDisposable
     {
-        private const string Inp1 = @"())(()
-";
-
-        private const string Out1 = @"2";
-
-        private const string Inp2 = @"))(((
-";
-
-        private const string Out2 = @"5";
-
         private const string Inp3 = @"((()))
 ";
 
@@ -32,8 +22,6 @@
         }
 
         [Theory]
-        [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
         [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {

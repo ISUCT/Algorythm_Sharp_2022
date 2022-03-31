@@ -64,7 +64,7 @@ namespace CourseApp.Module3
                 if ((buffer[buffer.Length - 1] != 0) && (buffer[buffer.Length - 1] == buffer[buffer.Length - 2]))
                 {
                     count = i;
-                } 
+                }
             }
 
             return count;

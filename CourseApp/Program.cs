@@ -1,5 +1,4 @@
-﻿using System;
-using CourseApp.Module3;
+﻿using CourseApp.Module4;
 
 namespace CourseApp
 {
@@ -7,7 +6,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            CyclicSubString.FindStringEntry();
+            CorrectBracketSequence.CountFails();
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿
-namespace CourseApp.Module2
+﻿namespace CourseApp.Module2
 {
     public class MergeSort
     {
-
         public static int[] Merge(int[] a, int[] b)
         {
             int idxA = 0;

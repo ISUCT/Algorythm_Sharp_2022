@@ -7,6 +7,7 @@ namespace CourseApp.Tests.Module2
         public static void PairSortMethod()
         {
             int n = int.Parse(Console.ReadLine());
+
             // для массивов больше ранга 1 в скобках нужна [,]
             int[,] pair = new int[n, 2];
             for (int i = 0; i < n; i++)

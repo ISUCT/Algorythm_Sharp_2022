@@ -6,25 +6,62 @@ public class NearestSmaller
     {
         int size = int.Parse(Console.ReadLine());
         string[] values = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        int j = 0;
         int[] result = new int[size];
 
         for (int i = size - 1; i >= 0; i--)
         {
-            j = i + 1;
-            while (j <= size - 1 && int.Parse(values[i]) <= int.Parse(values[j]))
+            while (Stack.Empty() == false && int.Parse(values[Stack.Top()]) >= int.Parse(values[i]))
             {
-                j++;
+                Stack.Pop();
             }
 
-            if (j > size - 1)
+            if (Stack.Empty() == true)
             {
                 result[i] = -1;
             }
             else
             {
-                result[i] = j;
+                result[i] = Stack.Top();
             }
+
+            Stack.Push(i);
+        }
+
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write(result[i] + " ");
+        }
+    }
+
+    private class Stack
+    {
+        private static int[] buffer = new int[100001];
+        private static int top = -1;
+
+        public static void Push(int a)
+        {
+            top++;
+            buffer[top] = a;
+        }
+
+        public static bool Empty()
+        {
+            return top <= -1;
+        }
+
+        public static int Size()
+        {
+            return top;
+        }
+
+        public static void Pop()
+        {
+            top--;
+        }
+
+        public static int Top()
+        {
+            return buffer[top];
         }
     }
 }

@@ -1,30 +1,24 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module3
 {
     using System;
     using System.IO;
-    using CourseApp.Module2;
+    using CourseApp.Module3;
     using Xunit;
 
     [Collection("Sequential")]
-    public class PairsTest : IDisposable
+    public class RabinKarpTest : IDisposable
     {
-        private const string Inp1 = @"3
-101 80
-305 90
-200 14";
+        private const string Inp3 = @"aaaaa";
 
-        private const string Out1 = @"305 90
-101 80
-200 14";
+        private const string Out3 = @"5";
 
-        private const string Inp2 = @"3
-20 80
-30 90
-25 90";
+        private const string Inp2 = @"abcabcabc";
 
-        private const string Out2 = @"25 90
-30 90
-20 80";
+        private const string Out2 = @"3";
+
+        private const string Inp1 = @"abab";
+
+        private const string Out1 = @"2";
 
         public void Dispose()
         {
@@ -36,9 +30,7 @@
         }
 
         [Theory]
-        [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
-
+        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -48,7 +40,7 @@
             Console.SetIn(stringReader);
 
             // act
-             PairsSort.PairsS();
+            Rabin_karp.Rabin_karp_Method();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

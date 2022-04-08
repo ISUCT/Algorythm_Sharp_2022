@@ -1,30 +1,22 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module3
 {
     using System;
     using System.IO;
-    using CourseApp.Module2;
+    using CourseApp.Module3;
     using Xunit;
 
     [Collection("Sequential")]
-    public class PairsTest : IDisposable
+    public class Cyclic_shift_Test : IDisposable
     {
-        private const string Inp1 = @"3
-101 80
-305 90
-200 14";
+        private const string Inp3 = @"zabcd
+abcdz";
 
-        private const string Out1 = @"305 90
-101 80
-200 14";
+        private const string Out3 = @"4";
 
-        private const string Inp2 = @"3
-20 80
-30 90
-25 90";
+        private const string Inp1 = @"a
+b";
 
-        private const string Out2 = @"25 90
-30 90
-20 80";
+        private const string Out1 = @"-1";
 
         public void Dispose()
         {
@@ -36,9 +28,8 @@
         }
 
         [Theory]
+        [InlineData(Inp3, Out3)]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
-
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -48,7 +39,7 @@
             Console.SetIn(stringReader);
 
             // act
-             PairsSort.PairsS();
+            Cyclic_shift.Cyclic_shift_Main();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

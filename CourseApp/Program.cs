@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module2;
+using CourseApp.Module3;
 
 namespace CourseApp
 {
@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            Task6Sort.Task6_Main();
+            Cyclic_string.Cyclic_Main();
         }
     }
 }

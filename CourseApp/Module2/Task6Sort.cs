@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseApp.Module2
 {
-    internal class Task6Sort
+    public class Task6Sort
     {
         public static void Sravn(int[] arr_data, int[] order_data)
         {

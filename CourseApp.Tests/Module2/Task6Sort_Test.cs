@@ -6,25 +6,18 @@
     using Xunit;
 
     [Collection("Sequential")]
-    public class PairsTest : IDisposable
+    public class Task6Sort_Test : IDisposable
     {
-        private const string Inp1 = @"3
-101 80
-305 90
-200 14";
+        private const string Inp1 = @"5
+1 50 3 4 3
+16
+1 2 3 4 5 1 3 3 4 5 5 5 5 5 4 5";
 
-        private const string Out1 = @"305 90
-101 80
-200 14";
-
-        private const string Inp2 = @"3
-20 80
-30 90
-25 90";
-
-        private const string Out2 = @"25 90
-30 90
-20 80";
+        private const string Out1 = @"yes
+no
+no
+no
+yes";
 
         public void Dispose()
         {
@@ -37,7 +30,6 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
 
         public void Test1(string input, string expected)
         {
@@ -48,7 +40,7 @@
             Console.SetIn(stringReader);
 
             // act
-             PairsSort.PairsS();
+            Task6Sort.Task6_Main();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

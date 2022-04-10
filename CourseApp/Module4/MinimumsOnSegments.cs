@@ -8,22 +8,41 @@ public class MinimumsOnSegments
         int lenArr = int.Parse(options[0]);
         int lenWin = int.Parse(options[1]);
         string[] values = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        int min = 0;
 
-        for (int i = 1; i < lenWin; i++)
+        for (int i = 0; i < lenWin; i++)
         {
-            if (int.Parse(values[i - 1]) < int.Parse(values[i]))
+            while (Deque.Empty() == false && int.Parse(values[i]) < int.Parse(values[Deque.Front()]))
             {
-                min = int.Parse(values[i]);
+                Deque.PopFront();
             }
 
-            Deque.PushFront(int.Parse(values[i]));
+            Deque.PushFront(i);
         }
 
         for (int i = lenWin; i < lenArr; i++)
         {
-            
+            Console.WriteLine(values[Deque.Back()]);
+
+            while (Deque.Empty() == false && Deque.Back() <= i - lenWin)
+            {
+                Deque.PopBack();
+            }
+
+            while (Deque.Empty() == false && int.Parse(values[i]) < int.Parse(values[Deque.Front()]))
+            {
+                Deque.PopFront();
+                if (Deque.Size() == 0)
+                {
+                    Deque.Clear();
+                }
+            }
+
+            Deque.PushFront(i);
         }
+
+        Console.WriteLine(values[Deque.Back()]);
+
+        Deque.Clear();
     }
 
     private class Deque

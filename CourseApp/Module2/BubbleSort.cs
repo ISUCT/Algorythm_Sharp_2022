@@ -1,38 +1,44 @@
-﻿using System;
+﻿using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CourseApp.Module2
 {
     public class BubbleSort
     {
-        public static void BubbleSortMethod()
+        public static void DoBubbleSort()
         {
-            int n = int.Parse(Console.ReadLine());
-            string s = Console.ReadLine();
-            string[] sValues = s.Split(' ');
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                arr[i] = int.Parse(sValues[i]);
-            }
+            string[] inputData = File.ReadAllLines("input.txt");
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            int[] array = inputData[1].Split(' ').Select(int.Parse).ToArray();
+
+            BubbleSortMethod(array);
+        }
+
+        public static void BubbleSortMethod(int[] array)
+        {
+            StreamWriter output = new StreamWriter("output.txt");
+            bool trigger = false;
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                for (int j = 0; j < array.Length - i - 1; j++)
                 {
-                    if (arr[j] > arr[j + 1])
+                    if (array[j] > array[j + 1])
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        (array[j], array[j + 1]) = (array[j + 1], array[j]);
+                        output.WriteLine(string.Join(" ", array));
+                        trigger = true;
                     }
                 }
             }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+            if (!trigger)
+            {
+                output.WriteLine("0");
+            }
+
+            output.Close();
         }
     }
 }

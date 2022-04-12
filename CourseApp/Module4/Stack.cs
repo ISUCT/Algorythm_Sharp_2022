@@ -2,18 +2,28 @@ namespace CourseApp.Module4
 {
     public class Stack
     {
-        private string[] buffer = new string[100000];
+        private int[] buffer;
         private int top = -1;
 
-        public void Push()
+        public Stack (int size)
+        {
+           buffer = new int[size];
+        }
+
+        public void Push(int input)
         {
             top++;
-            buffer[top] = "(";
+            buffer[top] = input;
         }
 
         public void Pop()
         {
             top--;
+        }
+
+        public int Back()
+        {
+            return buffer[top];
         }
 
         public bool Empty()
@@ -24,6 +34,11 @@ namespace CourseApp.Module4
         public int Size()
         {
             return top + 1;
+        }
+
+        public void Clear()
+        {
+            top = -1;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace CourseApp.Module4
@@ -10,7 +11,7 @@ namespace CourseApp.Module4
             string data = reader.ReadLine();
             reader.Close();
 
-            Stack bracket = new Stack();
+            Stack bracket = new Stack(data.Length);
             int fails = 0;
             foreach (char item in data)
             {
@@ -18,7 +19,7 @@ namespace CourseApp.Module4
                 {
                     case '(':
                     {
-                        bracket.Push();
+                        bracket.Push(Convert.ToInt32('('));
                     }
 
                     break;
@@ -26,6 +27,7 @@ namespace CourseApp.Module4
                     {
                         if (!bracket.Empty())
                         {
+                            bracket.Back();
                             bracket.Pop();
                         }
                         else

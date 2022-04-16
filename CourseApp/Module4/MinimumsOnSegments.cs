@@ -8,7 +8,6 @@ public class MinimumsOnSegments
         int lenArr = int.Parse(options[0]);
         int lenWin = int.Parse(options[1]);
         string[] values = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        lenArr = values.Length;
 
         for (int i = 0; i < lenWin; i++)
         {
@@ -42,8 +41,6 @@ public class MinimumsOnSegments
         }
 
         Console.WriteLine(values[Deque.Back()]);
-
-        Deque.Clear();
     }
 
     private class Deque

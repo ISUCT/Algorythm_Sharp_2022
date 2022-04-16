@@ -8,6 +8,7 @@ public class MinimumsOnSegments
         int lenArr = int.Parse(options[0]);
         int lenWin = int.Parse(options[1]);
         string[] values = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        lenArr = values.Length;
 
         for (int i = 0; i < lenWin; i++)
         {
@@ -47,15 +48,15 @@ public class MinimumsOnSegments
 
     private class Deque
     {
-        private static int[] buffer = new int[150010];
+        private static int[] buffer = new int[150010000];
         private static int front = 0;
-        private static int back = 0;
+        private static int back = buffer.Length - 1;
         private static int size = 0;
 
         public static void PushBack(int t)
         {
             back++;
-            if (back == buffer.Length - 1)
+            if (back == buffer.Length)
             {
                 back = 0;
             }
@@ -90,7 +91,7 @@ public class MinimumsOnSegments
         public static void PopFront()
         {
             front++;
-            if (front == buffer.Length - 1)
+            if (front == buffer.Length)
             {
                 front = 0;
             }
@@ -102,6 +103,7 @@ public class MinimumsOnSegments
         {
             front = 0;
             back = buffer.Length - 1;
+            size = 0;
         }
 
         public static int Front()

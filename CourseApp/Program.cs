@@ -18,7 +18,8 @@ namespace CourseApp
             /*SearchSubstring.ClassMain();*/
             /*PeriodOfString.ClassMain();*/
             /*CyclicString.ClassMain();*/
-            PSP.GETPSP();
+            /*PSP.GETPSP();*/
+            Sorting.GetSorting();
         }
     }
 }

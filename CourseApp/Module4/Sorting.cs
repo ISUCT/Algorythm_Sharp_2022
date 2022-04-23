@@ -4,7 +4,7 @@ namespace CourseApp.Module4
 {
     public class Sorting
     {
-        public static void GetSorting()
+        public static void СlassMain()
         {
             var numberOfWagons = int.Parse(Console.ReadLine());
             var s = Console.ReadLine();

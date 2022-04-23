@@ -45,7 +45,7 @@
             Console.SetIn(stringReader);
 
             // act
-            Sorting.GetSorting();
+            Sorting.СlassMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

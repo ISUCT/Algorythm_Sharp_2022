@@ -32,7 +32,9 @@ namespace CourseApp
             // BubbleSortPair.BubbleSortMethod();
 
             // PSP.GetPSP();
-            Sorting.GetSorting();
+
+            // Sorting.GetSorting();
+            NearestSmaller.GetNearestSmaller();
         }
     }
 }

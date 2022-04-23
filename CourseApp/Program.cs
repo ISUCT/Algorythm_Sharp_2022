@@ -30,7 +30,9 @@ namespace CourseApp
             // BubbleSort.BubbleSortMethod();
 
             // BubbleSortPair.BubbleSortMethod();
-            PSP.GetPSP();
+
+            // PSP.GetPSP();
+            Sorting.GetSorting();
         }
     }
 }

@@ -20,7 +20,8 @@ namespace CourseApp
             /*CyclicString.ClassMain();*/
             /*PSP.GETPSP();*/
             /*Sorting.СlassMain();*/
-            NearestSmallerNumber.ClassMain();
+            /*NearestSmallerNumber.ClassMain();*/
+            MinimaOnSegments.ClassMain();
         }
     }
 }

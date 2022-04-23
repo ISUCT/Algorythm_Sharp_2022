@@ -1,5 +1,6 @@
 ﻿using CourseApp.Module2;
 using CourseApp.Module3;
+using CourseApp.Module4;
 
 namespace CourseApp
 {
@@ -17,7 +18,7 @@ namespace CourseApp
             /*SearchSubstring.ClassMain();*/
             /*PeriodOfString.ClassMain();*/
             /*CyclicString.ClassMain();*/
-            CyclicShift.ClassMain();
+            PSP.GETPSP();
         }
     }
 }

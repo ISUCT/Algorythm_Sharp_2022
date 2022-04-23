@@ -34,7 +34,9 @@ namespace CourseApp
             // PSP.GetPSP();
 
             // Sorting.GetSorting();
-            NearestSmaller.GetNearestSmaller();
+
+            // NearestSmaller.GetNearestSmaller();
+            MinimumSegments.GetMinimumSegments();
         }
     }
 }

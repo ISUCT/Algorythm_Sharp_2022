@@ -18,7 +18,8 @@
             // GetPSP.GetPSPMethod();
             // Paths.PathsMethod();
             // NearestSmaller.NearestSmallerMethod();
-            MinimumsOnSegments.MinimumsOnSegmentsMethod();
+            // MinimumsOnSegments.MinimumsOnSegmentsMethod();
+            BinaryTreeElements.BinaryTreeElementsMethod();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module2;
+using CourseApp.Module4;
 
 namespace CourseApp
 {
@@ -12,7 +12,10 @@ namespace CourseApp
             // MergeSort.Go(); //
             // InversionSort.Enter(); //
             // QuickSort.Enter(); //
-            Warehouse.Enter();
+            // Warehouse.Enter(); //
+            // PSP.Receive_PSP(); //
+            // Sorting.Receive_Sort(); //
+            Nearest_Min.Receive_Nearest_Min();
         }
     }
 }

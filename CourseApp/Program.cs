@@ -1,6 +1,7 @@
 ﻿using System;
 using CourseApp.Module2;
 using CourseApp.Module3;
+using CourseApp.Module4;
 
 namespace CourseApp
 {
@@ -17,7 +18,11 @@ namespace CourseApp
             // Searchsubstring.EnterValues(); //
             // CycShift.EnterValues(); //
             // LinePer.EnterValues(); //
-            CycStr.EnterValues();
+            // CycStr.EnterValues(); //
+            // Correct_bracket_sequence.CBS_Method(); //
+            // Sort.Sort_Method(); //
+            // NearSmaller.NearSmaller_Method(); //
+            MinOnSeg.MinOnSeg_Method();
         }
     }
 }

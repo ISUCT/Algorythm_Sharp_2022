@@ -6,7 +6,7 @@
     {
         public static void Main(string[] args)
         {
-            Psp.PspMethod();
+            NearestSmaller.NearestSmallerMethod();
         }
     }
 }

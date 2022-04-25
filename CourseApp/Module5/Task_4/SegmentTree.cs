@@ -76,7 +76,7 @@ namespace CourseApp.Module5.Task_4
 
         private List<int> InnerGetIndex(int index, int left, int right, List<int>[] segment, int query_left, int query_right, ref int find, ref bool trigger)
         {
-            if (trigger == false)
+            if (!trigger)
             {
                 return new List<int>();
             }

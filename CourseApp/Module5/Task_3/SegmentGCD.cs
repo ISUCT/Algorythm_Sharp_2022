@@ -24,7 +24,7 @@ namespace CourseApp.Module5.Task_3
 
             reader.Close();
             StreamWriter output = new StreamWriter("output.txt");
-            output.WriteLine(string.Join(' ', res));
+            output.WriteLine(string.Join(" ", res));
             output.Close();
         }
     }

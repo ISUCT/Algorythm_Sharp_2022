@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module3;
+using CourseApp.Module4;
 
 namespace CourseApp
 {
@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            Cyclic_string.Cyclic_Main();
+            PSP.Main_PSP();
         }
     }
 }

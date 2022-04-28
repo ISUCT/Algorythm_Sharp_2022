@@ -1,13 +1,12 @@
 ﻿using System;
-using CourseApp.Module2;
 
-namespace CourseApp
+namespace Module4
 {
 public class Program
     {
         public static void Main(string[] args)
         {
-            Task7.Task7_Main();
+            Task1.Task1Main();
         }
     }
 }

@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Module1\" />
+    <Folder Include="Module5\" />
   </ItemGroup>
 
 </Project>

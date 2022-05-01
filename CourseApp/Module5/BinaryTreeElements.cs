@@ -19,12 +19,7 @@ public class BinaryTreeElements
             tree.Insert(int.Parse(values[i]));
         }
 
-        var result = tree.GetValues();
-
-        for (int i = 0; i < result.Count; i++)
-        {
-            Console.WriteLine(result[i]);
-        }
+        tree.FindLastElements();
     }
 
     public void Insert(int data)
@@ -37,6 +32,54 @@ public class BinaryTreeElements
         values = new List<int>();
         InnerTraversal(root);
         return values;
+    }
+
+    public bool Find(int data)
+    {
+        return InnerFind(data, root);
+    }
+
+    private void FindLastElements()
+    {
+        LastElements(root);
+    }
+
+    private void LastElements(Node value)
+    {
+        if (value == null)
+        {
+            return;
+        }
+
+        LastElements(value.Left);
+
+        if ((value.Left != null && value.Right == null) || (value.Right != null && value.Left == null))
+        {
+            Console.WriteLine(value.Data);
+        }
+
+        LastElements(value.Right);
+    }
+
+    private bool InnerFind(int data, Node root)
+    {
+        if (root == null)
+        {
+            return false;
+        }
+
+        if (data == root.Data)
+        {
+            return true;
+        }
+        else if (data < root.Data)
+        {
+            return InnerFind(data, root.Left);
+        }
+        else
+        {
+            return InnerFind(data, root.Right);
+        }
     }
 
     private Node InnerInsert(int data, Node root)
@@ -75,6 +118,8 @@ public class BinaryTreeElements
         public Node(int data)
         {
             Data = data;
+            Left = null;
+            Right = null;
         }
 
         public Node Left { get; set; }

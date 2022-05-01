@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            PSP.Main_PSP();
+            Window.Window_Main();
         }
     }
 }

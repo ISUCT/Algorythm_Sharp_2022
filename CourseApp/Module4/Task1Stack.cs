@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Module4
 {
 #pragma warning disable SA1649 // File name must match first type name
-    public class Stack<T>
+    public class Staack<T>
 #pragma warning restore SA1649 // File name must match first type name
     {
         private List<T> items = new List<T>();

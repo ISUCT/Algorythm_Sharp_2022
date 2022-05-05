@@ -3,18 +3,18 @@ using System.IO;
 using Xunit;
 using CourseApp.Module2;
 
-namespace CourseApp.Module3
+namespace Module4
 {
     [Collection("Sequential")]
-    public class Task4Tests : IDisposable
+    public class Task1Tests : IDisposable
     {
-        private const string Inp1 = @"z";
+        private const string Inp1 = @"())(()";
 
-        private const string Inp2 = @"";
+        private const string Inp2 = @"))(((";
 
-        private const string Out1 = @"1";
+        private const string Out1 = @"2";
 
-        private const string Out2 = @"";
+        private const string Out2 = @"5";
 
         public void Dispose()
         {
@@ -37,7 +37,7 @@ namespace CourseApp.Module3
             Console.SetIn(stringReader);
 
             // act
-            Task4.Task4Main();
+            Task2.Task2Main();
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
             var result = string.Join(Environment.NewLine, output);
             Assert.Equal($"{expected}", result);

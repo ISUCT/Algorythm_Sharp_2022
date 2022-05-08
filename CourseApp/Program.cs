@@ -19,7 +19,8 @@
             // Paths.PathsMethod();
             // NearestSmaller.NearestSmallerMethod();
             // MinimumsOnSegments.MinimumsOnSegmentsMethod();
-            BinaryTreeElements.BinaryTreeElementsMethod();
+            // BinaryTreeElements.BinaryTreeElementsMethod();
+            BalancedTree.BalancedTreeMethod();
         }
     }
 }

@@ -1,22 +1,16 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module3
 {
     using System;
     using System.IO;
-    using CourseApp.Module2;
+    using CourseApp.Module3;
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class CyclicStringTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"z";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"1";
 
         public void Dispose()
         {
@@ -29,7 +23,7 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        public void Test1(string input, string expected)
+        public void CyclicStringTestMethod(string input, string expected)
         {
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
@@ -37,10 +31,8 @@
             var stringReader = new StringReader(input);
             Console.SetIn(stringReader);
 
-            // act
-            BubbleSort.BubbleSortMethod();
+            CyclicString.CyclicStringMethod();
 
-            // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
             var result = string.Join(Environment.NewLine, output);
 

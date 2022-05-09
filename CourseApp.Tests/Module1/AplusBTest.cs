@@ -1,10 +1,11 @@
-﻿using System;
-using System.IO;
-using Xunit;
-using CourseApp.Module1;
-
-namespace CourseApp.Tests.Module1
+﻿namespace CourseApp.Tests.Module1
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module1;
+    using Xunit;
+
     [Collection("Sequential")]
     public class AplusBTest : IDisposable
     {

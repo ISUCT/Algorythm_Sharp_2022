@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CourseApp.Module2
 {
-    public class BubbleSort
+    public static class BubbleSort
     {
+        private static bool swapped = false;
+
         public static void BubbleSortMethod()
         {
             int n = int.Parse(Console.ReadLine());
@@ -17,22 +17,31 @@ namespace CourseApp.Module2
                 arr[i] = int.Parse(sValues[i]);
             }
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 for (int j = 0; j < arr.Length - i - 1; j++)
                 {
                     if (arr[j] > arr[j + 1])
                     {
-                        // int temp = arr[j];
-                        // arr[j] = arr[j + 1];
-                        // arr[j+1] = temp;
-                        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                        Swap(ref arr[j], ref arr[j + 1]);
+                        string result = string.Join(" ", arr);
+                        Console.WriteLine(result);
+                        swapped = true;
                     }
                 }
             }
 
-            string result = string.Join(" ", arr);
-            Console.WriteLine(result);
+            if (swapped == false)
+            {
+                Console.WriteLine(0);
+            }
+        }
+
+        private static void Swap(ref int left, ref int right)
+        {
+            int temp = right;
+            right = left;
+            left = temp;
         }
     }
 }

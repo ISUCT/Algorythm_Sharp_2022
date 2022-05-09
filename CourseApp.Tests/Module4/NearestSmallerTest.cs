@@ -1,22 +1,17 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module4
 {
     using System;
     using System.IO;
-    using CourseApp.Module2;
+    using CourseApp.Module4;
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class NearestSmallerTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"10
+1 2 3 2 1 4 2 5 3 1";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"-1 4 3 4 -1 6 9 8 9 -1 ";
 
         public void Dispose()
         {
@@ -38,7 +33,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            NearestSmaller.NearestSmallerMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

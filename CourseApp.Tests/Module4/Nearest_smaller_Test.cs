@@ -33,7 +33,7 @@
             Console.SetIn(stringReader);
 
             // act
-            Nearest_smaller.Nearest_smaller_Main();
+            Nearest_smallerA.Nearest_smaller_Main();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

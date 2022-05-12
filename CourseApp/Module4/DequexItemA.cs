@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CourseApp.Module4
 {
-    public class DequexItem<T>
+    public class DequexItemA<T>
     {
         public T Data { get; set; }
 
-        public DequexItem<T> Next { get; set; }
+        public DequexItemA<T> Next { get; set; }
 
-        public DequexItem<T> Previous { get; set; }
+        public DequexItemA<T> Previous { get; set; }
 
 /*        public DequexItem(T data)
         {

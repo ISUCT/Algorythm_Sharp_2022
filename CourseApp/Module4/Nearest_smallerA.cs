@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseApp.Module4
 {
-    public class Nearest_smaller
+    public class Nearest_smallerA
     {
         public static void Nearest_smaller_Method(int coll, string[] data)
         {

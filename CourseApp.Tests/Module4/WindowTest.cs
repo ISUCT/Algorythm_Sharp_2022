@@ -38,7 +38,7 @@
             Console.SetIn(stringReader);
 
             // act
-            Window.Window_Main();
+            WindowA.Window_Main();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

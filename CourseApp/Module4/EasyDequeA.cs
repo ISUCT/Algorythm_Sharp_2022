@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseApp.Module4
 {
-    public class EasyDeque<T>
+    public class EasyDequeA<T>
     {
         private List<T> items = new List<T>();
 

@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            Window.Window_Main();
+            WindowA.Window_Main();
         }
     }
 }

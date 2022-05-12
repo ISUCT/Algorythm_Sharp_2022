@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CourseApp.Module4
 {
-    public class Window
+    public class WindowA
     {
         public static void Window_method(int[] collArr, string[] windowA)
         {
-            var easyDeque = new EasyDeque<int>();
+            var easyDeque = new EasyDequeA<int>();
 
             int sizearray = collArr[0];
 

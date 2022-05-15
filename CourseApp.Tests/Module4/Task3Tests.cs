@@ -3,25 +3,20 @@ using System.IO;
 using Xunit;
 using CourseApp.Module2;
 
-namespace CourseApp.Tests.Module2
+namespace CourseApp.Module4
 {
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class Task3Tests : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"10
+1 2 3 2 1 4 2 5 3 1";
 
-        private const string Inp2 = @"4
-1 2 3 4";
+        private const string Inp2 = @"3
+1 2 3";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"-1 4 3 4 -1 6 9 8 9 -1";
 
-        private const string Out2 = @"0";
+        private const string Out2 = @"-1 -1 -1";
 
         public void Dispose()
         {
@@ -44,9 +39,7 @@ namespace CourseApp.Tests.Module2
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
-
-            // assert
+            Task3.Program.Task3Main();
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
             var result = string.Join(Environment.NewLine, output);
             Assert.Equal($"{expected}", result);

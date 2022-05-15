@@ -1,15 +1,12 @@
 ﻿using System;
-using CourseApp.Module2;
 
-namespace CourseApp
+namespace CourseApp.Module4
 {
-    public class Program
+public class Program
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
-
-            Console.WriteLine("Hello World");
+            Task2.Task2Main();
         }
     }
 }

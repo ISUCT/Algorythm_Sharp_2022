@@ -6,22 +6,22 @@ using CourseApp.Module2;
 namespace CourseApp.Tests.Module2
 {
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class Task5Test : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"2
+1 0";
 
-        private const string Inp2 = @"4
-1 2 3 4";
+        private const string Inp2 = @"3
+1 0 1";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Inp3 = @"5
+1 0 1 2 0";
 
-        private const string Out2 = @"0";
+        private const string Out1 = @"2";
+
+        private const string Out2 = @"2";
+
+        private const string Out3 = @"3";
 
         public void Dispose()
         {
@@ -44,7 +44,7 @@ namespace CourseApp.Tests.Module2
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            Task5_v2.ClassMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

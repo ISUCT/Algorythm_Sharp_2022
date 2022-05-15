@@ -3,7 +3,7 @@ using System.IO;
 using Xunit;
 using CourseApp.Module2;
 
-namespace Module4
+namespace CourseApp.Module4
 {
     [Collection("Sequential")]
     public class Task1Tests : IDisposable

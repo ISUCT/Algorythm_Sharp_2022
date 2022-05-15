@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module4
+namespace CourseApp.Module4
 {
     public class Task1
     {

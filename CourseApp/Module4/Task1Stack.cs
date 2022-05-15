@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module4
+namespace CourseApp.Module4
 {
 #pragma warning disable SA1649 // File name must match first type name
-    public class Staack<T>
+    public class ListStack<T>
 #pragma warning restore SA1649 // File name must match first type name
     {
         private List<T> items = new List<T>();

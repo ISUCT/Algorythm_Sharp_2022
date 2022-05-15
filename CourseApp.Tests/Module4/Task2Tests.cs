@@ -3,18 +3,20 @@ using System.IO;
 using Xunit;
 using CourseApp.Module2;
 
-namespace Module4
+namespace CourseApp.Module4
 {
     [Collection("Sequential")]
-    public class Task1Tests : IDisposable
+    public class Task2Tests : IDisposable
     {
-        private const string Inp1 = @"())(()";
+        private const string Inp1 = @"3
+3 2 1";
 
-        private const string Inp2 = @"))(((";
+        private const string Inp2 = @"3
+2 3 1";
 
-        private const string Out1 = @"2";
+        private const string Out1 = @"YES";
 
-        private const string Out2 = @"5";
+        private const string Out2 = @"NO";
 
         public void Dispose()
         {

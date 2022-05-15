@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module4
+namespace CourseApp.Module4
 {
     public class Task2
     {
         public static bool Task2Method(int[] valueArr)
         {
-            Staack<int> stack = new Staack<int>();
+            ListStack<int> stack = new ListStack<int>();
             int count = 1;
             bool flag = true;
 

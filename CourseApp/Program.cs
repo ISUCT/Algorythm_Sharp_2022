@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Module4
+namespace CourseApp.Module4
 {
 public class Program
     {

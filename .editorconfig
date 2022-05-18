@@ -1,10 +1,4 @@
 ﻿[*.cs]
 
-# IDE0005: Директива using не нужна.
-dotnet_diagnostic.IDE0005.severity = none
-
-# IDE0051: Удалите неиспользуемые закрытые члены
-dotnet_diagnostic.IDE0051.severity = none
-
 # SA1201: Elements must appear in the correct order
 dotnet_diagnostic.SA1201.severity = none

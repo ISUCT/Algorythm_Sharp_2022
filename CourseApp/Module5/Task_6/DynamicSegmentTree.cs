@@ -13,27 +13,9 @@ namespace CourseApp.Module5.Task_6
 
         public DynamicSegmentTree(int input)
         {
-            segments = new List<int>[4 * input];
             size = input;
-        }
-
-        public List<int> Check(List<int> a, List<int> b)
-        {
-            List<int> temp;
-            if (a.Count() == 0 && b.Count() != 0)
-            {
-                temp = new List<int>(b);
-                return temp;
-            }
-            else if (a.Count() != 0 && b.Count() != 0)
-            {
-                temp = new List<int>(a);
-                temp.AddRange(b);
-                return temp;
-            }
-
-            temp = new List<int>(a);
-            return temp;
+            int arr_size = 4 * size;
+            segments = new List<int>[arr_size];
         }
 
         public void Build(int[] numbers)
@@ -63,7 +45,7 @@ namespace CourseApp.Module5.Task_6
 
         private void InnerBuild(int index, int left, int right, int[] numbers)
         {
-            if (right - left == 1)
+            if (right - left <= 1)
             {
                 segments[index] = new List<int>();
                 if (numbers[left] == 0)
@@ -77,17 +59,21 @@ namespace CourseApp.Module5.Task_6
             int half = (left + right) / 2;
             InnerBuild((2 * index) + 1, left, half, numbers);
             InnerBuild((2 * index) + 2, half, right, numbers);
-            segments[index] = Check(segments[(2 * index) + 1], segments[(2 * index) + 2]);
+            segments[index] = new List<int>(segments[(2 * index) + 1]);
+            segments[index].AddRange(segments[(2 * index) + 2]);
         }
 
         private void InnerUpdate (int index, int left, int right, List<int>[] segments, int upd_index, bool trigger, ref int pos)
         {
-            if (right - left == 1)
+            if (right - left <= 1)
             {
-                segments[index] = new List<int>();
                 if (trigger)
                 {
                     segments[index].Add(upd_index + 1);
+                }
+                else
+                {
+                    segments[index] = new List<int>();
                 }
 
                 return;
@@ -122,17 +108,8 @@ namespace CourseApp.Module5.Task_6
                     }
                     else
                     {
-                        int dif = segments[index].Count() - segments[(2 * index) + 2].Count();
-                        if (dif <= 0)
-                        {
-                            pos++;
-                            segments[index].Insert(pos, upd_index + 1);
-                        }
-                        else
-                        {
-                            pos += dif;
-                            segments[index].Insert(pos, upd_index + 1);
-                        }
+                        pos = segments[(2 * index) + 1].Count() + pos;
+                        segments[index].Insert(pos, upd_index + 1);
                     }
                 }
                 else

@@ -5,13 +5,10 @@ public class BalancedTree
 {
     private Node root;
     private List<int> values;
-    private int leftSize = 0;
-    private int rightSize = 0;
+    private int size = 0;
     private bool checker;
 
-    public int Size { get; }
-
-    public static void BalancedTreeMethod()
+    public static void CheckBalancedTreeMethod()
     {
         string[] values = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -22,12 +19,12 @@ public class BalancedTree
             tree.Insert(int.Parse(values[i]));
         }
 
-        tree.CheckBalanced();
+        tree.Check();
     }
 
     public void Insert(int data)
     {
-        root = InnerInsert(data, root);
+        root = InnerInsert(data, root, null, 0);
     }
 
     public List<int> GetValues()
@@ -42,24 +39,60 @@ public class BalancedTree
         return InnerFind(data, root);
     }
 
-    private void CheckBalanced()
+    private void Check()
     {
-        Check(root, 0, 0);
+        checker = true;
+        CheckBalancedTree(root);
+        if (checker == true)
+        {
+            Console.WriteLine("YES");
+        }
+        else
+        {
+            Console.WriteLine("NO");
+        }
     }
 
-    private void Check(Node value, int left, int right)
+    private void CheckBalancedTree(Node value)
     {
-        Node previos = value;
-
-        if (value == null)
+        if (value == null || checker == false)
         {
             return;
         }
 
-        if ()
+        int a = SizeDepth(value.Right, 0);
+        int b = SizeDepth(value.Left, 0);
 
-        Check(root.Left);
-        Check(root.Right);
+        if (Math.Abs(SizeDepth(value.Right, 0) - SizeDepth(value.Left, 0)) > 1)
+        {
+            checker = false;
+            return;
+        }
+
+        CheckBalancedTree(value.Left);
+
+        CheckBalancedTree(value.Right);
+    }
+
+    private int SizeDepth(Node root, int previousDepth)
+    {
+        int depthRight = 0;
+        int depthLeft = 0;
+
+        if (root == null)
+        {
+            return 0;
+        }
+        else if (root.Left != null)
+        {
+            depthLeft = SizeDepth(root.Left, 1 + previousDepth);
+        }
+        else if (root.Right != null)
+        {
+            depthRight = SizeDepth(root.Right, 1 + previousDepth);
+        }
+
+        return Math.Max(Math.Max(depthRight, depthLeft), previousDepth + 1);
     }
 
     private bool InnerFind(int data, Node root)
@@ -83,20 +116,21 @@ public class BalancedTree
         }
     }
 
-    private Node InnerInsert(int data, Node root)
+    private Node InnerInsert(int data, Node root, Node previous, int depth)
     {
         if (root == null)
         {
+            size++;
             return new Node(data);
         }
 
         if (root.Data > data)
         {
-            root.Left = InnerInsert(data, root.Left);
+            root.Left = InnerInsert(data, root.Left, root, depth);
         }
         else if (root.Data < data)
         {
-            root.Right = InnerInsert(data, root.Right);
+            root.Right = InnerInsert(data, root.Right, root, depth);
         }
 
         return root;
@@ -112,42 +146,6 @@ public class BalancedTree
         InnerTraversal(node.Left);
         values.Add(node.Data);
         InnerTraversal(node.Right);
-    }
-
-    private void CheckLeftSize(Node value)
-    {
-        if (value != null)
-        {
-            leftSize += 1;
-        }
-
-        if (value.Left != null)
-        {
-            CheckLeftSize(value.Left);
-        }
-
-        if (value.Right != null)
-        {
-            CheckLeftSize(value.Right);
-        }
-    }
-
-    private void CheckRightSize(Node value)
-    {
-        if (value != null)
-        {
-            rightSize += 1;
-        }
-
-        if (value.Left != null)
-        {
-            CheckRightSize(value.Left);
-        }
-
-        if (value.Right != null)
-        {
-            CheckRightSize(value.Right);
-        }
     }
 
     internal class Node

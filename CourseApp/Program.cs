@@ -20,7 +20,8 @@
             // NearestSmaller.NearestSmallerMethod();
             // MinimumsOnSegments.MinimumsOnSegmentsMethod();
             // BinaryTreeElements.BinaryTreeElementsMethod();
-            BalancedTree.BalancedTreeMethod();
+            // BalancedTree.CheckBalancedTreeMethod();
+            NOD_OnSegments.NOD_OnSegmentsMethod();
         }
     }
 }

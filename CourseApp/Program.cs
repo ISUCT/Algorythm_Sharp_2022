@@ -1,5 +1,4 @@
-﻿using System;
-using CourseApp.Module2;
+﻿using CourseApp.Module5.Task_6;
 
 namespace CourseApp
 {
@@ -7,9 +6,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
-
-            Console.WriteLine("Hello World");
+            IndexOfNulls.CheckIndexs();
         }
     }
 }

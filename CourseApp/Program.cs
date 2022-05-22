@@ -21,7 +21,8 @@
             // MinimumsOnSegments.MinimumsOnSegmentsMethod();
             // BinaryTreeElements.BinaryTreeElementsMethod();
             // BalancedTree.CheckBalancedTreeMethod();
-            NOD_OnSegments.NOD_OnSegmentsMethod();
+            // NOD_OnSegments.NOD_OnSegmentsMethod();
+            NOD_OnSubsegmentsDynamic.NOD_OnSubsegmentsDynamicMethod();
         }
     }
 }

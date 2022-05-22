@@ -22,7 +22,7 @@ public class NOD_OnSegments
 
         for (int i = 0; i < result.Count; i++)
         {
-            Console.Write(result[i]);
+            Console.Write(result[i] + " ");
         }
     }
 

@@ -1,13 +1,27 @@
-﻿using System;
-using System.IO;
-using Xunit;
-using CourseApp.Module1;
-
-namespace CourseApp.Tests.Module1
+﻿namespace CourseApp.Tests.Module3
 {
+    using System;
+    using System.IO;
+    using Xunit;
+
     [Collection("Sequential")]
-    public class AplusBTest : IDisposable
+    public class PeriodOfStringTest : IDisposable
     {
+        private const string Inp1 = @"aaaaa
+";
+
+        private const string Out1 = @"5";
+
+        private const string Inp2 = @"abcabcabc
+";
+
+        private const string Out2 = @"3";
+
+        private const string Inp3 = @"abab
+";
+
+        private const string Out3 = @"2";
+
         public void Dispose()
         {
             var standardOut = new StreamWriter(Console.OpenStandardOutput());
@@ -18,9 +32,9 @@ namespace CourseApp.Tests.Module1
         }
 
         [Theory]
-        [InlineData("10 12", "22")]
-        [InlineData("1 1", "2")]
-        [InlineData("10000 10000", "20000")]
+        [InlineData(Inp1, Out1)]
+        [InlineData(Inp2, Out2)]
+        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -30,12 +44,13 @@ namespace CourseApp.Tests.Module1
             Console.SetIn(stringReader);
 
             // act
-            AplusB.Calculate();
+            PeriodOfString.PeriodOfStringMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-            Assert.Equal($"{expected}", output[0]);
-            var standardOutput = new StreamWriter(Console.OpenStandardOutput());
+            var result = string.Join(Environment.NewLine, output);
+
+            Assert.Equal($"{expected}", result);
         }
     }
 }

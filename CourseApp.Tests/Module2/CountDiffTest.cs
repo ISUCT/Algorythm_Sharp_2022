@@ -5,17 +5,17 @@
     using Xunit;
 
     [Collection("Sequential")]
-public class BubbleSortTest : IDisposable
+public class CountDiffTest : IDisposable
 {
-    private const string Inp1 = @"4
-4 3 2 1";
+    private const string Inp1 = @"5
+1 0 1 2 0";
 
-    private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Inp2 = @"10
+1 0 1 2 0 4 4 4 9 1";
+
+        private const string Out1 = @"3";
+
+        private const string Out2 = @"5";
 
     public void Dispose()
     {
@@ -28,6 +28,7 @@ public class BubbleSortTest : IDisposable
 
     [Theory]
     [InlineData(Inp1, Out1)]
+    [InlineData(Inp2, Out2)]
     public void Test1(string input, string expected)
     {
         var stringWriter = new StringWriter();
@@ -37,10 +38,10 @@ public class BubbleSortTest : IDisposable
         Console.SetIn(stringReader);
 
         // act
-        BubbleSort.BubbleSortMethod();
+        CountDiff.CountDiffMethod();
 
         // assert
-        var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+        var output = stringWriter.ToString();
         var result = string.Join(Environment.NewLine, output);
 
         Assert.Equal($"{expected}", result);

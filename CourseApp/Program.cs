@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module4;
+using CourseApp.Module5;
 
 namespace CourseApp
 {
@@ -15,7 +15,8 @@ namespace CourseApp
             // Warehouse.Enter(); //
             // PSP.Receive_PSP(); //
             // Sorting.Receive_Sort(); //
-            Nearest_Min.Receive_Nearest_Min();
+            // Nearest_Min.Receive_Nearest_Min(); //
+            Binary_Tree.BinaryTreeMethod();
         }
     }
 }

@@ -8,6 +8,22 @@ namespace CourseApp.Module5
         private Node root;
         private List<int> size;
 
+        public static void BinaryTreeMethod()
+        {
+            string s = Console.ReadLine();
+
+            string[] sValues = s.Split(' ');
+
+            var tree = new Binary_Tree();
+
+            for (int i = 0; i < sValues.Length - 1; i++)
+            {
+                tree.Insert(int.Parse(sValues[i]));
+            }
+
+            tree.FindLastElem();
+        }
+
         public void Insert(int v)
         {
             root = InnerInsert(v, root);
@@ -113,22 +129,6 @@ namespace CourseApp.Module5
             public Node Right { get; set; }
 
             public int Data { get; set; }
-        }
-
-        public static void BinaryTreeMethod()
-        {
-            string s = Console.ReadLine();
-
-            string[] sValues = s.Split(' ');
-
-            var tree = new Binary_Tree();
-
-            for (int i = 0; i < sValues.Length - 1; i++)
-            {
-                tree.Insert(int.Parse(sValues[i]));
-            }
-
-            tree.FindLastElem();
         }
     }
 }

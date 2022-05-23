@@ -39,7 +39,9 @@ namespace CourseApp
             // NearestSmaller.GetNearestSmaller();
 
             // MinimumSegments.GetMinimumSegments();
-            BinaryTreeBranches.BinaryTreeMethod();
+
+            // BinaryTreeBranches.BinaryTreeMethod();
+            IsTreeBalanced.IsTreeBalancedMethod();
         }
     }
 }

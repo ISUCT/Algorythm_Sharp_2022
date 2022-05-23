@@ -2,6 +2,7 @@
 using CourseApp.Module2;
 using CourseApp.Module3;
 using CourseApp.Module4;
+using CourseApp.Module5;
 
 namespace CourseApp
 {
@@ -36,7 +37,9 @@ namespace CourseApp
             // Sorting.GetSorting();
 
             // NearestSmaller.GetNearestSmaller();
-            MinimumSegments.GetMinimumSegments();
+
+            // MinimumSegments.GetMinimumSegments();
+            BinaryTreeBranches.BinaryTreeMethod();
         }
     }
 }

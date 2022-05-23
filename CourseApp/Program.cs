@@ -1,6 +1,7 @@
 ﻿using CourseApp.Module2;
 using CourseApp.Module3;
 using CourseApp.Module4;
+using CourseApp.Module5;
 
 namespace CourseApp
 {
@@ -21,7 +22,9 @@ namespace CourseApp
             /*PSP.GETPSP();*/
             /*Sorting.СlassMain();*/
             /*NearestSmallerNumber.ClassMain();*/
-            MinimaOnSegments.ClassMain();
+            /*MinimaOnSegments.ClassMain();*/
+            /*BranchesOfaBinaryTree.ClassMain();*/
+            BalancedTree.ClassMain();
         }
     }
 }

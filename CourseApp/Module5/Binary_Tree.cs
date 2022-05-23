@@ -57,11 +57,6 @@ namespace CourseApp.Module5
             }
         }
 
-        private bool Find(int v)
-        {
-            return InnerFind(v, root);
-        }
-
         private void FindLastElem()
         {
             LastElem(root);

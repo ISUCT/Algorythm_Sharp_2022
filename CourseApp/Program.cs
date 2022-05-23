@@ -10,7 +10,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            TreeBalanceCheck.Binary_Tree.TreeBalanceCheckMethod();
+            RadixSort.RadixSortMethod();
         }
     }
 }

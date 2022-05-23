@@ -1,28 +1,16 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module4
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
-    using CourseApp.Module2;
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class NearestSmallerNumberTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"10
+1 2 3 2 1 4 2 5 3 1";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
-
-        private const string Inp2 = @"4
-1 2 3 4";
-
-        private const string Out2 = @"0";
+        private const string Out1 = @"-1 4 3 4 -1 6 9 8 9 -1 ";
 
         public void Dispose()
         {
@@ -35,7 +23,6 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -45,7 +32,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMeth();
+            NearestSmallerNumber.ClassMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

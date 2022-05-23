@@ -1,28 +1,32 @@
 ﻿namespace CourseApp.Tests.Module2
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using CourseApp.Module2;
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class MergeSortTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"1
+1";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"1";
 
-        private const string Inp2 = @"4
-1 2 3 4";
+        private const string Inp2 = @"2
+3 1";
 
-        private const string Out2 = @"0";
+        private const string Out2 = @"1 2 1 3
+1 3";
+
+        private const string Inp3 = @"5
+5 4 3 2 1";
+
+        private const string Out3 = @"1 2 4 5
+4 5 1 2
+3 5 1 3
+1 5 1 5
+1 2 3 4 5";
 
         public void Dispose()
         {
@@ -36,6 +40,7 @@
         [Theory]
         [InlineData(Inp1, Out1)]
         [InlineData(Inp2, Out2)]
+        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -45,7 +50,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMeth();
+            MergeSort.ClassMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module5;
+using CourseApp.Module2;
 
 namespace CourseApp
 {
@@ -17,7 +17,8 @@ namespace CourseApp
             // Sorting.Receive_Sort(); //
             // Nearest_Min.Receive_Nearest_Min(); //
             // Binary_Tree.BinaryTreeMethod(); //
-            Balanced_Tree.BalancedTreeMethod();
+            // Balanced_Tree.BalancedTreeMethod(); //
+            RadixSort.Enter();
         }
     }
 }

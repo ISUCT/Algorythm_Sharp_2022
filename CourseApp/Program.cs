@@ -16,7 +16,8 @@ namespace CourseApp
             // PSP.Receive_PSP(); //
             // Sorting.Receive_Sort(); //
             // Nearest_Min.Receive_Nearest_Min(); //
-            Binary_Tree.BinaryTreeMethod();
+            // Binary_Tree.BinaryTreeMethod(); //
+            Balanced_Tree.BalancedTreeMethod();
         }
     }
 }

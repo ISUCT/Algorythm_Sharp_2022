@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module4;
+using CourseApp.Module5;
 
 namespace CourseApp
 {
@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            WindowA.Window_Main();
+            Less1.TreeW();
         }
     }
 }

@@ -38,7 +38,7 @@ public class Class1
         Console.WriteLine(windowArray[Deque.Back()]);
     }
 
-    public static void Main()
+/*    public static void RTMain()
     {
         string s1 = Console.ReadLine();
         string[] s1Values = s1.Split(' ');
@@ -57,7 +57,7 @@ public class Class1
         }
 
         WindowB(array1, array2);
-    }
+    }*/
 
     private class Deque
     {

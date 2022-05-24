@@ -1,28 +1,16 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module5
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
-    using CourseApp.Module2;
+    using CourseApp.Module5;
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class Balanced_TreeTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"7 3 2 1 9 5 4 6 8 0";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
-
-        private const string Inp2 = @"4
-1 2 3 4";
-
-        private const string Out2 = @"0";
+        private const string Out1 = @"YES";
 
         public void Dispose()
         {
@@ -35,7 +23,6 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -45,7 +32,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortM();
+            Balanced_Tree.BalTreeMeth();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

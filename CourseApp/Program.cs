@@ -25,7 +25,8 @@ namespace CourseApp
             // NearSmaller.NearSmaller_Method(); //
             // MinOnSeg.MinOnSeg_Method(); //
             // Bin_Tree.BinTreeMeth(); //
-            Balanced_Tree.BalTreeMeth();
+            // Balanced_Tree.BalTreeMeth(); //
+             BitwiseSort.Method();
         }
     }
 }

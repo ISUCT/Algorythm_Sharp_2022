@@ -20,58 +20,48 @@ namespace CourseApp.Module5
 
         public Node(T data, Node<T> left, Node<T> right)
         {
-            Right = right;
+            Data = data;
             Left = left;
+            Right = right;
         }
 
-        public void Add(T data)
+        public bool Add(T data)
         {
-            var node = new Node<T>(data);
+            if (data == null)
+            {
+                return false;
+            }
 
-            if (node.Data.CompareTo(Data) == -1)
+            var compareResult = data.CompareTo(Data);
+
+            if (compareResult < 0)
             {
                 if (Left == null)
                 {
-                    Left = node;
+                    Left = new Node<T>(data);
                 }
                 else
                 {
-                    Left.Add(data);
+                    return Left.Add(data);
                 }
+            }
+            else if (compareResult == 0)
+            {
+                return false;
             }
             else
             {
                 if (Right == null)
                 {
-                    Right = node;
+                    Right = new Node<T>(data);
                 }
                 else
                 {
-                    Right.Add(data);
+                    return Right.Add(data);
                 }
             }
-        }
 
-/*        public void SchildrenTree()
-        {
-
-        }*/
-
-        public int CompeareTo(object obj)
-        {
-            if (obj is Node<T> item)
-            {
-                return Data.CompareTo(item);
-            }
-            else
-            {
-                throw new Exception("Не совпад типов");
-            }
-        }
-
-        public int CompareTo(T other)
-        {
-            return Data.CompareTo(other);
+            return true;
         }
 
         public override string ToString()

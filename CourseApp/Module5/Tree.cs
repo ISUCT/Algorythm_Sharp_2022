@@ -13,17 +13,27 @@ namespace CourseApp.Module5
 
         public int Count { get; private set; }
 
-        public void Add(T data)
+        public bool Add(T data)
         {
+            if (data == null)
+            {
+                return false;
+            }
+
             if (Root == null)
             {
                 Root = new Node<T>(data);
                 Count = 1;
-                return;
+                return true;
             }
 
-            Root.Add(data);
-            Count++;
+            var addResult = Root.Add(data);
+            if (addResult)
+            {
+                Count++;
+            }
+
+            return addResult;
         }
 
         public List<T> Preorder()
@@ -41,6 +51,11 @@ namespace CourseApp.Module5
             var list = new List<T>();
             Children(Root, list);
             return list;
+        }
+
+        public bool Balanced()
+        {
+            return Balanced(Root);
         }
 
         private List<T> Preorder(Node<T> node)
@@ -78,6 +93,34 @@ namespace CourseApp.Module5
             }
 
             Children(node.Right, list);
+        }
+
+        private int Height(Node<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            return 1 + Math.Max(Height(node.Left), Height(node.Right));
+        }
+
+        private bool Balanced(Node<T> node)
+        {
+            if (node == null)
+            {
+                return true;
+            }
+
+            int leftHeight = Height(node.Left);
+            int rightHeight = Height(node.Right);
+
+            if (Math.Abs(leftHeight - rightHeight) <= 1 && Balanced(node.Left) && Balanced(node.Right))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

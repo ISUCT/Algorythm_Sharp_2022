@@ -6,22 +6,27 @@
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class MergeSorttTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"1
+1";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"1";
 
-        private const string Inp2 = @"4
-1 2 3 4";
+        private const string Inp2 = @"2
+3 1";
 
-        private const string Out2 = @"0";
+        private const string Out2 = @"1 2 1 3
+1 3";
+
+        private const string Inp3 = @"2
+3 1";
+
+        private const string Out3 = @"1 2 4 5
+4 5 1 2
+3 5 1 3
+1 5 1 5
+1 2 3 4 5";
 
         public void Dispose()
         {
@@ -32,9 +37,18 @@
             Console.SetIn(standardIn);
         }
 
+        /*        [Theory]
+                [InlineData(new int[] { 1 }, new int[] { 2 }, new int[] { 1, 2 })]
+                public void TestMerge(int[] a, int[] b, int[] exp)
+                {
+                    var res = MergeSort.MergeSortMethod(a, b);
+                    Assert.Equal(exp, res);
+                }*/
+
         [Theory]
         [InlineData(Inp1, Out1)]
         [InlineData(Inp2, Out2)]
+        [InlineData(Inp3, Out3)]
 
         public void Test1(string input, string expected)
         {
@@ -45,7 +59,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            MergeSort.MergeMain();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

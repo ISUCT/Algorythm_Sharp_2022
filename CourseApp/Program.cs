@@ -1,5 +1,5 @@
 ﻿using System;
-using CourseApp.Module2;
+using CourseApp.Module5;
 
 namespace CourseApp
 {
@@ -7,9 +7,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
-
-            Console.WriteLine("Hello World");
+            Less1.TreeW();
         }
     }
 }

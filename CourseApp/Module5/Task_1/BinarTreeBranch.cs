@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 namespace CourseApp.Module5.Task_1
 {
-    public class BinarTree
+    public class BinarTreeBranch
     {
         private Node root;
         private List<int> size;
 
-        public static void BinaryTreeMethod()
+        public static void BinaryTreeBranchMethod()
         {
             string s = Console.ReadLine();
 
             string[] sValues = s.Split(' ');
 
-            var tree = new BinarTree();
+            var tree = new BinarTreeBranch();
 
             for (int i = 0; i < sValues.Length - 1; i++)
             {

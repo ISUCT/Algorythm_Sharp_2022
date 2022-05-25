@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CourseApp.Module5.Task_1
 {
-    public class IsTreeBalanc
+    public class IsTreeBalanced
     {
         private Node root;
 
@@ -13,7 +13,7 @@ namespace CourseApp.Module5.Task_1
 
             string[] values = s.Split(' ');
 
-            var tree = new IsTreeBalanc();
+            var tree = new IsTreeBalanced();
 
             for (int i = 0; i < values.Length - 1; i++)
             {

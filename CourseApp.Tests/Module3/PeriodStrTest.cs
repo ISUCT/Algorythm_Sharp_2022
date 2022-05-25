@@ -1,22 +1,24 @@
-﻿namespace CourseApp.Tests.Module2
+﻿namespace CourseApp.Tests.Module3
 {
     using System;
     using System.IO;
-    using CourseApp.Module2;
+    using CourseApp.Module3;
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class PeriodStrTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"aaaaa";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"5";
+
+        private const string Inp2 = @"abcabcabc";
+
+        private const string Out2 = @"3";
+
+        private const string Inp3 = @"abab";
+
+        private const string Out3 = @"2";
 
         public void Dispose()
         {
@@ -29,6 +31,8 @@
 
         [Theory]
         [InlineData(Inp1, Out1)]
+        [InlineData(Inp2, Out2)]
+        [InlineData(Inp3, Out3)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -38,7 +42,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            PeriodStr.EnterVal();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

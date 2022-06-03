@@ -1,0 +1,52 @@
+using System;
+
+namespace CourseApp.Module3
+{
+    public class Program
+    {
+        public static int[] PrefixFunc(string w)
+        {
+            int[] res = new int[w.Length];
+            res[0] = 0;
+
+            for (int i = 0; i < w.Length - 1; i++)
+            {
+                int j = res[i];
+
+                while (j > 0 && w[i + 1] != w[j])
+                {
+                    j = res[j - 1];
+                }
+
+                if (w[i + 1] == w[j])
+                {
+                    res[i + 1] = j + 1;
+                }
+                else
+                {
+                    res[i + 1] = 0;
+                }
+            }
+
+            return res;
+        }
+
+        public static void Main()
+        {
+            string w = Console.ReadLine();
+
+            int[] prefixs = PrefixFunc(w);
+
+            int result = w.Length - prefixs[w.Length - 1];
+
+            if (w.Length % result == 0)
+            {
+                Console.WriteLine(w.Length / result);
+            }
+            else
+            {
+                Console.WriteLine(1);
+            }
+        }
+    }
+}

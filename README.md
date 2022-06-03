@@ -1,3 +1,4 @@
-# Tprogramming_42_2020
+# Tprogramming_147_2022
+Kulichkov Oleg
 
 Master branch :)

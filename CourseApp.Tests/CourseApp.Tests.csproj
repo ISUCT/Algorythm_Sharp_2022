@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>1573,1591,1701;1702;1705</NoWarn>
     <IsPackable>false</IsPackable>

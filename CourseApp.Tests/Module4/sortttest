@@ -1,0 +1,795 @@
+DisL0V3
+#7013
+
+
+
+Текстовый канал
+general-chat
+Поиск
+
+Добро пожаловать на канал #general-chat!
+Это начало канала #general-chat.
+20 октября 2021 г.
+Рады тебя видеть, 
+m.rau
+.
+ — 20.10.2021
+
+Помашите и поздоровайтесь!
+
+markkket — 20.10.2021
+Hello
+21 октября 2021 г.
+Дарина Кочнева 1/42
+ уже с нами!
+ — 21.10.2021
+
+Помашите и поздоровайтесь!
+26 октября 2021 г.
+
+m.rau — 26.10.2021
+я чуть с обычным англом не перепутала
+14 ноября 2021 г.
+
+markkket — 14.11.2021
+https://www.audacityteam.org/
+Audacity ®
+James Crook
+Home
+Welcome to Audacity
+
+
+Audacity® is free, open source, cross-platform audio software for multi-track recording and editing.
+
+Audacity is available for Windows®, Mac®, GNU/Linux® and other operating systems. Check our feature list, Wiki and Forum.
+
+
+
+Download Audacity 2.1.3
+
+
+
+Mar 17th, 2017: Audacity
+22 февраля 2022 г.
+Dmitry_Shi***
+ присоединяется к вашей пати.
+ — 22.02.2022
+
+
+Помашите и поздоровайтесь!
+maks
+ проскальзывает на сервер.
+ — 22.02.2022
+
+Помашите и поздоровайтесь!
+5 марта 2022 г.
+Рады тебя видеть, 
+DisL0V3
+.
+ — 05.03.2022
+
+Помашите и поздоровайтесь!
+9 марта 2022 г.
+
+markkket — 09.03.2022
+у меня с ноута звука нет позвоню в вк
+27 марта 2022 г.
+poulina
+ уже здесь.
+ — 27.03.2022
+
+Помашите и поздоровайтесь!
+23 апреля 2022 г.
+Добро пожаловать, 
+Lis
+. Надеемся, ты к нам не без пиццы!
+ — 23.04.2022
+
+Помашите и поздоровайтесь!
+24 апреля 2022 г.
+Pavelqsw
+ запрыгивает на сервер.
+ — 24.04.2022
+
+Помашите и поздоровайтесь!
+28 мая 2022 г.
+
+DisL0V3 — 28.05.2022
+
+3 июня 2022 г.
+
+Lis — Сегодня, в 13:19
+это 3 модуль
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+Раскрыть
+Class1.cs
+2 кб
+using System;
+using System.Linq;
+
+namespace CourseApp.Module3
+{
+    public class Program
+Раскрыть
+Class2.cs
+2 кб
+using System;
+
+namespace CourseApp.Module3
+{
+    public class Program
+    {
+Раскрыть
+Class3.cs
+2 кб
+using System;
+
+namespace CourseApp.Module3
+{
+    public class Program
+    {
+Раскрыть
+Class4.cs
+1 кб
+[13:19]
+это 4 модуль
+using System;
+
+namespace CourseApp.Module4
+{
+    public class Psp
+    {
+Раскрыть
+Class1.cs
+2 кб
+using System;
+
+namespace CourseApp.Module4
+{
+    public class SORT
+    {
+Раскрыть
+Class2.cs
+3 кб
+using System;
+
+public class NearSmal
+{
+    public static void Main()
+    {
+Раскрыть
+Class3.cs
+2 кб
+using System;
+
+public class MinSeg
+{
+    public static void Main()
+    {
+Раскрыть
+Class4.cs
+4 кб
+[13:19]
+5 модуль
+using System;
+using System.Collections.Generic;
+
+namespace Programm
+{
+    public class BinarTree
+Раскрыть
+Class1.cs
+3 кб
+using System;
+using System.Collections.Generic;
+
+namespace Programm
+{
+    public class IsTreeBalanced
+Раскрыть
+Class2.cs
+3 кб
+[13:19]
+то что с верху это контест
+[13:21]
+это 3 модуль гит
+using System;
+
+namespace CourseApp.Module3
+{
+    public class CircularStr
+    {
+        public static int[] Prefix_function(string b)
+        {
+            int[] res = new int[b.Length];
+            res[0] = 0;
+
+            for (int i = 0; i < b.Length - 1; i++)
+            {
+                int j = res[i];
+
+                while (j > 0 && b[i + 1] != b[j])
+                {
+                    j = res[j - 1];
+                }
+
+                if (b[i + 1] == b[j])
+                {
+                    res[i + 1] = j + 1;
+                }
+                else
+                {
+                    res[i + 1] = 0;
+                }
+            }
+
+            return res;
+        }
+
+        public static void EnterVal()
+        {
+            string b = Console.ReadLine();
+
+            int[] prefixs = Prefix_function(b);
+
+            int result = b.Length - prefixs[b.Length - 1];
+
+            Console.WriteLine(result);
+        }
+    }
+}
+Свернуть
+CircularStr.cs
+1 кб
+using System;
+using System.Linq;
+
+namespace CourseApp.Module3
+{
+    public class CyclicShift
+Раскрыть
+CyclicShift.cs
+2 кб
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+Раскрыть
+FindSubstr.cs
+2 кб
+using System;
+
+namespace CourseApp.Module3
+{
+    public class PeriodStr
+    {
+Раскрыть
+PeriodStr.cs
+2 кб
+[13:21]
+это 4 модуль гит
+using System;
+
+public class MinSeg
+{
+    public static void GetMinSeg()
+    {
+Раскрыть
+MinSeg.cs
+4 кб
+using System;
+
+public class NearSmal
+{
+    public static void GetNearestSmaller()
+    {
+Раскрыть
+NearSmal.cs
+2 кб
+using System;
+
+namespace CourseApp.Module4
+{
+    public class Psp
+    {
+Раскрыть
+Psp.cs
+2 кб
+using System;
+
+namespace CourseApp.Module4
+{
+    public class SORT
+    {
+Раскрыть
+SORT.cs
+3 кб
+[13:23]
+это 5 модуль гит
+using System;
+using System.Collections.Generic;
+
+namespace CourseApp.Module5.Task_1
+{
+    public class BinarTreeBranch
+    {
+        private Node root;
+        private List<int> size;
+
+        public static void BinaryTreeBranchMethod()
+        {
+            string s = Console.ReadLine();
+
+            string[] sValues = s.Split(' ');
+
+            var tree = new BinarTreeBranch();
+
+            for (int i = 0; i < sValues.Length - 1; i++)
+            {
+                tree.Insert(int.Parse(sValues[i]));
+            }
+
+            tree.FindLastElem();
+        }
+
+        public void Insert(int n)
+        {
+            root = InnerInsert(n, root);
+        }
+
+        public List<int> GetValues()
+        {
+            size = new List<int>();
+            InnerTraversal(root);
+            return size;
+        }
+
+        private bool InnerFind(int n, Node root)
+        {
+            if (root == null)
+            {
+                return false;
+            }
+
+            if (n == root.Data)
+            {
+                return true;
+            }
+            else if (n < root.Data)
+            {
+                return InnerFind(n, root.Left);
+            }
+            else
+            {
+                return InnerFind(n, root.Right);
+            }
+        }
+
+        public static void BinaryTreeMethod()
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool Find(int n)
+        {
+            return InnerFind(n, root);
+        }
+
+        private void FindLastElem()
+        {
+            LastElem(root);
+        }
+
+        private void LastElem(Node value)
+        {
+            if (value == null)
+            {
+                return;
+            }
+
+            LastElem(value.Left);
+
+            if ((value.Left != null && value.Right == null) || (value.Right != null && value.Left == null))
+            {
+                Console.WriteLine(value.Data);
+            }
+
+            LastElem(value.Right);
+        }
+
+        private Node InnerInsert(int n, Node root)
+        {
+            if (root == null)
+            {
+                return new Node(n);
+            }
+
+            if (root.Data > n)
+            {
+... (осталось: 39 строк)
+Свернуть
+BinarTreeBranch.cs
+4 кб
+using System;
+using System.Collections.Generic;
+
+namespace CourseApp.Module5.Task_1
+{
+    public class IsTreeBalanced
+    {
+        private Node root;
+
+        public static void IsTreeBalancedMethod()
+        {
+            string s = Console.ReadLine();
+
+            string[] values = s.Split(' ');
+
+            var tree = new IsTreeBalanced();
+
+            for (int i = 0; i < values.Length - 1; i++)
+            {
+                tree.Insert(int.Parse(values[i]));
+            }
+
+            if (tree.IsBalanced(tree.root))
+            {
+                Console.WriteLine("YES");
+            }
+            else
+            {
+                Console.WriteLine("NO");
+            }
+        }
+
+        public void Insert(int data)
+        {
+            root = InnerInsert(data, root);
+        }
+
+        private Node InnerInsert(int data, Node root)
+        {
+            if (root == null)
+            {
+                return new Node(data);
+            }
+
+            if (root.Data > data)
+            {
+                root.Left = InnerInsert(data, root.Left);
+            }
+            else if (root.Data < data)
+            {
+                root.Right = InnerInsert(data, root.Right);
+            }
+
+            return root;
+        }
+
+        private bool IsBalanced(Node node)
+        {
+            int lh;
+
+            int rh;
+
+            if (node == null)
+            {
+                return true;
+            }
+
+            lh = Height(node.Left);
+            rh = Height(node.Right);
+
+            if (Math.Abs(lh - rh) <= 1 && IsBalanced(node.Left)
+                && IsBalanced(node.Right))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private int Height(Node node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            return 1 + Math.Max(Height(node.Left), Height(node.Right));
+        }
+    }
+}
+Свернуть
+IsTreeBalanced.cs
+3 кб
+namespace CourseApp.Module5.Task_1
+{
+    public class Node
+    {
+        public Node(int data)
+        {
+            Data = data;
+            Left = null;
+            Right = null;
+        }
+
+        public Node Left { get; set; }
+
+        public Node Right { get; set; }
+
+        public int Data { get; set; }
+    }
+}
+Свернуть
+Node.cs
+1 кб
+
+DisL0V3 — Сегодня, в 13:37
+бля сек
+
+Lis — Сегодня, в 13:49
+тест 1 модуля
+using System;
+using System.IO;
+using Xunit;
+using CourseApp.Module1;
+
+namespace CourseApp.Tests.Module1
+Раскрыть
+AplusBTest.cs
+2 кб
+[13:49]
+тест 2 модуля
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module2;
+    using Xunit;
+Раскрыть
+BubbleSortTest.cs
+2 кб
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+Раскрыть
+InversionCountTest.cs
+2 кб
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+Раскрыть
+MergeTest.cs
+2 кб
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+Раскрыть
+NumberDifTest.cs
+2 кб
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+Раскрыть
+PairSortTest.cs
+2 кб
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+Раскрыть
+RadixSortTest.cs
+2 кб
+namespace CourseApp.Tests.Module2
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module2;
+Раскрыть
+WarehouseTest.cs
+2 кб
+[13:50]
+тест 3 модуля
+namespace CourseApp.Tests.Module3
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module3;
+    using Xunit;
+Раскрыть
+CircularStrTest.cs
+2 кб
+namespace CourseApp.Tests.Module3
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module3;
+    using Xunit;
+Раскрыть
+CyclingShiftTest.cs
+2 кб
+namespace CourseApp.Tests.Module3
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module3;
+    using Xunit;
+Раскрыть
+FindSubstrTest.cs
+2 кб
+namespace CourseApp.Tests.Module3
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module3;
+    using Xunit;
+Раскрыть
+PeriodStrTest.cs
+2 кб
+[13:50]
+тест 4 модуля
+namespace CourseApp.Tests.Module4
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module4;
+    using Xunit;
+Раскрыть
+MinSegTest.cs
+2 кб
+namespace CourseApp.Tests.Module4
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module4;
+    using Xunit;
+Раскрыть
+NearSmalTest.cs
+2 кб
+namespace CourseApp.Tests.Module4
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module4;
+    using Xunit;
+Раскрыть
+PspTest.cs
+2 кб
+namespace CourseApp.Tests.Module4
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module4;
+Раскрыть
+SortTest.cs
+2 кб
+[13:50]
+тест 5 модуля
+namespace CourseApp.Tests.Module5
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module5;
+    using CourseApp.Module5.Task_1;
+Раскрыть
+BinarTreeBranchTest.cs
+2 кб
+namespace CourseApp.Tests.Module5
+{
+    using System;
+    using System.IO;
+    using CourseApp.Module5;
+    using CourseApp.Module5.Task_1;
+Раскрыть
+IsTreeBalancedTest.cs
+2 кб
+
+Написать #general-chat
+﻿
+
+
+
+
+Осталось символов: 2000
+ для выбора
+В СЕТИ, 4 УЧАСТНИКАВ СЕТИ — 4
+
+DisL0V3
+
+Lis
+
+markkket
+
+poulina
+НЕ В СЕТИ, 5 УЧАСТНИКОВНЕ В СЕТИ — 5
+
+Dmitry_Shi***
+
+m.rau
+
+maks
+
+Pavelqsw
+
+Дарина Кочнева 1/42
+namespace CourseApp.Tests.Module4
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using CourseApp.Module4;
+    using Xunit;
+
+    [Collection("Sequential")]
+    public class SortTest : IDisposable
+    {
+        private const string Inp1 = @"3
+3 2 1";
+
+        private const string Out1 = @"YES";
+
+        private const string Inp2 = @"4
+4 1 3 2";
+
+        private const string Out2 = @"YES";
+
+        private const string Inp3 = @"3
+2 3 1";
+
+        private const string Out3 = @"NO";
+
+        public void Dispose()
+        {
+            var standardOut = new StreamWriter(Console.OpenStandardOutput());
+            standardOut.AutoFlush = true;
+            var standardIn = new StreamReader(Console.OpenStandardInput());
+            Console.SetOut(standardOut);
+            Console.SetIn(standardIn);
+        }
+
+        [Theory]
+        [InlineData(Inp1, Out1)]
+        [InlineData(Inp2, Out2)]
+        [InlineData(Inp3, Out3)]
+        public void Test1(string input, string expected)
+        {
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            var stringReader = new StringReader(input);
+            Console.SetIn(stringReader);
+
+            // act
+            SORT.GetSorting();
+
+            // assert
+            var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            var result = string.Join(Environment.NewLine, output);
+
+            Assert.Equal($"{expected}", result);
+        }
+    }
+}

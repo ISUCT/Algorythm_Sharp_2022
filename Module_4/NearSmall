@@ -1,16 +1,12 @@
 using System;
 
-public class NearSmall
+public class NearSmal
 {
-    public static void Main()
-    {
-        GetNearestSmaller();
-    }
     public static void GetNearestSmaller()
     {
         var numElem = int.Parse(Console.ReadLine());
-        var h = Console.ReadLine();
-        var sVal = h.Split(' ');
+        var s = Console.ReadLine();
+        var sVal = s.Split(' ');
         var arrElem = new int[numElem];
         var ansArr = new int[numElem];
         for (int i = 0; i < numElem; i++)
@@ -83,3 +79,4 @@ public class NearSmall
         }
     }
 }
+

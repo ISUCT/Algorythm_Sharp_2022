@@ -2,10 +2,6 @@ using System;
 
 public class MinSeg
 {
-    public static void Main()
-    {
-        GetMinSeg();
-    }
     public static void GetMinSeg()
     {
         string sFirst = Console.ReadLine();
@@ -139,4 +135,3 @@ public class MinSeg
         }
     }
 }
-

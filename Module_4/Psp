@@ -4,10 +4,6 @@ namespace CourseApp.Module4
 {
     public class Psp
     {
-        public static void Main()
-        {
-            GetPsp();
-        }
         public static void GetPsp()
         {
             string parenthes = Console.ReadLine();
@@ -70,4 +66,3 @@ namespace CourseApp.Module4
         }
     }
 }
-

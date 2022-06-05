@@ -57,7 +57,7 @@ namespace CourseApp.Module2
             Console.WriteLine("Initial array:");
             Console.WriteLine("{0}", string.Join(", ", arr_string));
 
-            foreach (var i in Enumerable.Range(0, Convert.ToInt32(Math.Ceiling(Convert.ToDouble(-1 - (rank - 1)) / -1))).Select(x_1 => rank - 1 + (x_1 * -1)))
+            for (int i = 0; i < rank; i++)
             {
                 Console.WriteLine("**********");
                 Console.WriteLine("Phase {0}", numb_phaze);

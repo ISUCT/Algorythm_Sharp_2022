@@ -1,5 +1,8 @@
 ﻿using System;
 using CourseApp.Module2;
+using CourseApp.Module3;
+using CourseApp.Module4;
+using CourseApp.Module5;
 
 namespace CourseApp
 {
@@ -7,9 +10,38 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            BubbleSort.BubbleSortMethod();
+            // CyclicShift.EnterValues();
 
-            Console.WriteLine("Hello World");
+            // CircularString.EnterValues();
+
+            // PeriodString.EnterValues();
+
+            // FindSubstring.EnterValues();
+
+            // RadixSort.Try();
+
+            // Warehouse.Try();
+
+            // NumbDiff.Try();
+
+            // InversionSort.Try();
+
+            // MergeSort.Try();
+
+            // BubbleSort.BubbleSortMethod();
+
+            // BubbleSortPair.BubbleSortMethod();
+
+            // PSP.GetPSP();
+
+            // Sorting.GetSorting();
+
+            // NearestSmaller.GetNearestSmaller();
+
+            // MinimumSegments.GetMinimumSegments();
+
+            // BinaryTreeBranches.BinaryTreeMethod();
+            IsTreeBalanced.IsTreeBalancedMethod();
         }
     }
 }

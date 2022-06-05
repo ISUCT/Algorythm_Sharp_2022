@@ -1,3 +1,5 @@
-# Tprogramming_42_2020
+# Algorythm 2022
+
+Butusov Alexander Olegovich
 
 Master branch :)

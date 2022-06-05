@@ -7,22 +7,25 @@
     using Xunit;
 
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+    public class BubbleSortPairTest : IDisposable
     {
-        private const string Inp1 = @"4
-4 3 2 1";
+        private const string Inp1 = @"3
+101 80
+305 90
+200 14";
 
-        private const string Out1 = @"3 4 2 1
-3 2 4 1
-3 2 1 4
-2 3 1 4
-2 1 3 4
-1 2 3 4";
+        private const string Out1 = @"305 90
+101 80
+200 14";
 
-        private const string Inp2 = @"4
-1 2 3 4";
+        private const string Inp2 = @"3
+20 80
+30 90
+25 90";
 
-        private const string Out2 = @"0";
+        private const string Out2 = @"25 90
+30 90
+20 80";
 
         public void Dispose()
         {
@@ -45,7 +48,7 @@
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            BubbleSortPair.BubbleSortMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);

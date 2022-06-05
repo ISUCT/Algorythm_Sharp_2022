@@ -48,7 +48,7 @@ public static class RadixSort
         int phase = 1;
         int length = array[0].Length;
 
-        foreach (var i in Enumerable.Range(0, Convert.ToInt32(Math.Ceiling(Convert.ToDouble(-1 - (grade - 1)) / -1))).Select(x_1 => grade - 1 + (x_1 * -1)))
+        for (int i = 0; i < grade; i++)
         {
             Console.WriteLine("**********");
             Console.WriteLine("Phase {0}", phase);

@@ -1,32 +1,55 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using Xunit;
 using CourseApp.Module2;
+using Xunit;
 
 namespace CourseApp.Tests.Module2
 {
     [Collection("Sequential")]
-    public class BubbleSortTest : IDisposable
+
+    public class RadixSortTest : IDisposable
     {
-        private const string Inp1 = @"7
-5 1 7 3 9 4 1";
+        private const string Inp1 = @"9
+12
+32
+45
+67
+98
+29
+61
+35
+09";
 
-        private const string Out1 = @"1 5 7 3 9 4 1
-1 5 3 7 9 4 1
-1 5 3 7 4 9 1
-1 5 3 7 4 1 9
-1 3 5 7 4 1 9
-1 3 5 4 7 1 9
-1 3 5 4 1 7 9
-1 3 4 5 1 7 9
-1 3 4 1 5 7 9
-1 3 1 4 5 7 9
-1 1 3 4 5 7 9";
-
-        private const string Inp2 = @"3
--10 2 7";
-
-        private const string Out2 = @"0";
+        private const string Out1 = @"Initial array:
+12, 32, 45, 67, 98, 29, 61, 35, 09
+**********
+Phase 1
+Bucket 0: empty
+Bucket 1: 61
+Bucket 2: 12, 32
+Bucket 3: empty
+Bucket 4: empty
+Bucket 5: 45, 35
+Bucket 6: empty
+Bucket 7: 67
+Bucket 8: 98
+Bucket 9: 29, 09
+**********
+Phase 2
+Bucket 0: 09
+Bucket 1: 12
+Bucket 2: 29
+Bucket 3: 32, 35
+Bucket 4: 45
+Bucket 5: empty
+Bucket 6: 61, 67
+Bucket 7: empty
+Bucket 8: empty
+Bucket 9: 98
+**********
+Sorted array:
+09, 12, 29, 32, 35, 45, 61, 67, 98";
 
         public void Dispose()
         {
@@ -39,7 +62,6 @@ namespace CourseApp.Tests.Module2
 
         [Theory]
         [InlineData(Inp1, Out1)]
-        [InlineData(Inp2, Out2)]
         public void Test1(string input, string expected)
         {
             var stringWriter = new StringWriter();
@@ -49,11 +71,12 @@ namespace CourseApp.Tests.Module2
             Console.SetIn(stringReader);
 
             // act
-            BubbleSort.BubbleSortMethod();
+            RadixSort.RadixSortMethod();
 
             // assert
             var output = stringWriter.ToString().Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
             var result = string.Join(Environment.NewLine, output);
+
             Assert.Equal($"{expected}", result);
         }
     }
